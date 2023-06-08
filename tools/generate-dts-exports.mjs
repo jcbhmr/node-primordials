@@ -13,22 +13,17 @@ function legalKey(key) {
   );
 }
 
-const nativeNames = (
-  await $`NODE_NO_WARNINGS=1 node --expose-internals -r internal/test/binding -p 'Reflect.ownKeys(primordials).join("\\n")'`
-)
+const nativeNames = (await $`tools/dump-primordials.sh`)
   .toString()
   .trim()
   .split("\n")
   .sort();
 
-const labels = nativeNames.map((name, i) => {
-  if (legalKey(name)) {
-    return name + ":null";
-  } else {
-    return JSON.stringify(name) + ":null";
-  }
-});
+const labels1 = nativeNames.filter((x) => legalKey(x));
+console.log(`export const {${labels1}} = primordials;`);
 
-const objectLiteral = `{${labels}}`;
-const line3 = `module.exports = ${objectLiteral};`;
-console.log(line3);
+const remainingNames = nativeNames.filter((x) => !legalKey(x));
+const labels2 = remainingNames.map((x, i) => JSON.stringify(x) + ":_" + i);
+console.log(`const {${labels2}} = primordials;`);
+const as1 = remainingNames.map((x, i) => `_${i} as ${JSON.stringify(x)}`);
+console.log(`export {${as1}};`);
