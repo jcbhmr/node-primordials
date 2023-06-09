@@ -66,20 +66,5 @@ You can see a list of what the current internal `primordials` object looks like
 for your current Node.js version by running `tools/dump-primordials.sh`.
 
 ```sh
-tools/dump-primordials.sh
-```
-
-If you want to re-generate the exports list for the `.d.ts` or `index.js` files,
-use one of these scripts. The reason we need a bunch of
-`module.exports = { ... }` stuff that does nothing in `index.js` is so that
-Node.js can search for `/module.exports\s*=.../` or similar to define static
-CJS-to-ESM named exports. Otherwise, the entire `module.exports` object would be
-exported as a default export. In order to get named `import { thing }` exports,
-we need to make them statically analyzable by Node.js.
-
-You can generate these exports using the following scripts:
-
-```sh
-tools/generate-cjs-exports.mjs
-tools/generate-dts-exports.mjs
+NODE_NO_WARNINGS=1 node --expose-internals -r internal/test/binding -p 'Reflect.ownKeys(primordials).join("\n")'
 ```

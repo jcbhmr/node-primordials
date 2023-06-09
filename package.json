@@ -3,13 +3,14 @@
   "name": "@jcbhmr/node-primordials",
   "version": "1.0.0",
   "description": "",
-  "imports": {
-    "#*": "./lib/*.js"
+  "exports": {
+    ".": "./dist/index.js",
+    "./*.js": "./dist/*.js",
+    "./internal/*": null
   },
-  "exports": "./index.js",
   "scripts": {
-    "start": "node --test --watch",
-    "test": "node --test"
+    "start": "tsx --test --watch test/*.test.ts",
+    "test": "tsx --test test/*.test.ts"
   },
   "keywords": [],
   "author": "",
