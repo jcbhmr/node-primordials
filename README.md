@@ -1,5 +1,7 @@
 # Node.js `primordials` object
 
+🧊 The native primordials object from Node.js for anywhere
+
 ## Installation
 
 Install this package using npm, [Yarn], or [pnpm]!

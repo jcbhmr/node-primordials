@@ -1,17 +1,25 @@
 {
-  "type": "commonjs",
   "name": "@jcbhmr/node-primordials",
   "version": "1.0.3",
-  "description": "",
+  "description": "desc",
+  "keywords": [],
+  "homepage": "https://jcbhmr.github.io/node-primordials/",
+  "bugs": "https://github.com/jcbhmr/node-primordials/issues",
+  "repository": "github:jcbhmr/node-primordials",
+  "license": "MIT",
+  "author": "Jacob Hummer <jcbhmr@outlook.com> (https://jcbhmr.me/)",
+  "type": "commonjs",
   "imports": {
     "#*": "./lib/*.js"
   },
   "exports": "./index.js",
   "scripts": {
+    "build:docs": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
     "start": "node --test --watch",
     "test": "node --test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "devDependencies": {
+    "vitepress": "^1.0.0-beta.2"
+  }
 }
