@@ -1,3 +1,4 @@
+// https://github.com/nodejs/node/blob/v20.3.0/typings/primordials.d.ts
 type UncurryThis<T extends (this: unknown, ...args: unknown[]) => unknown> =
   (self: ThisParameterType<T>, ...args: Parameters<T>) => ReturnType<T>;
 type UncurryThisStaticApply<T extends (this: unknown, ...args: unknown[]) => unknown> =

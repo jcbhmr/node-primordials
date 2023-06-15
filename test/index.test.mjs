@@ -1,27 +1,20 @@
 import test from "node:test";
 import assert from "node:assert";
-import { $ } from "zx";
-$.verbose = false;
 import * as index from "../index.js";
+import fsPromises from "node:fs/promises";
 
-const nativeNames = (await $`tools/dump-primordials.sh`)
-  .toString()
+const nativeNames = (await fsPromises.readFile("tools/primordials.txt", "utf8"))
   .trim()
-  .split("\n")
-  .sort();
+  .split(/\r?\n/g);
 
-test("has all the right things on the default export", async () => {
-  for (const name of nativeNames) {
-    await test(`has ${name}`, () => {
-      assert(name in index.default, `missing ${name}!`);
-    });
-  }
-});
+for (const name of nativeNames) {
+  test(`default has ${name}`, () => {
+    assert(name in index.default);
+  });
+}
 
-test("has the appropriate named exports", async () => {
-  for (const name of nativeNames) {
-    await test(`has ${name}`, () => {
-      assert(name in index, `missing ${name}!`);
-    });
-  }
-});
+for (const name of nativeNames) {
+  test(`named has ${name}`, () => {
+    assert(name in index);
+  });
+}

@@ -63,10 +63,11 @@ properly prime the TypeScript LSP to give you intellisense for both named
 exports and default exports.
 
 You can see a list of what the current internal `primordials` object looks like
-for your current Node.js version by running `tools/dump-primordials.sh`.
+for your current Node.js version by running this:
 
 ```sh
-tools/dump-primordials.sh
+NODE_NO_WARNINGS=1 node --expose-internals -r internal/test/binding \
+  -p 'Reflect.ownKeys(primordials).join("\n")'
 ```
 
 If you want to re-generate the exports list for the `.d.ts` or `index.js` files,

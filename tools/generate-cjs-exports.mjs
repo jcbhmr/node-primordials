@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import { $ } from "zx";
-$.verbose = false;
+import fsPromises from "node:fs/promises";
 
 // https://github.com/marcello3d/node-tosource/blob/e415c4366ec3c8a958be8a243806323611000f29/src/tosource.ts#L105-L106
 const KEYWORD_REGEXP =
@@ -13,11 +12,9 @@ function legalKey(key) {
   );
 }
 
-const nativeNames = (await $`tools/dump-primordials.sh`)
-  .toString()
+const nativeNames = (await fsPromises.readFile("tools/primordials.txt", "utf8"))
   .trim()
-  .split("\n")
-  .sort();
+  .split(/\r?\n/g);
 
 const labels = nativeNames.map((name, i) => {
   if (legalKey(name)) {
