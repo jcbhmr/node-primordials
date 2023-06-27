@@ -1,13 +1,11 @@
-import { ArrayPrototypeSymbolIterator } from "./Array.js";
-import { createSafeIterator, uncurryThis } from "./util.js";
+import { uncurryThis } from "./uncurryThis.js";
+import { createSafeIterator } from "./createSafeIterator.js";
 
-const ArrayIterator = {
-  prototype: Reflect.getPrototypeOf(
+export const ArrayIterator = {
+  prototype: Object.getPrototypeOf(
     Array.prototype[Symbol.iterator]()
   ) as IterableIterator<unknown>,
 };
-
-export default ArrayIterator;
 export const ArrayIteratorPrototype = ArrayIterator.prototype;
 export const ArrayIteratorPrototypeNext = uncurryThis(
   ArrayIteratorPrototype.next
@@ -16,6 +14,6 @@ export const ArrayIteratorPrototypeSymbolToStringTag =
   ArrayIteratorPrototype[Symbol.toStringTag];
 
 export const SafeArrayIterator = createSafeIterator(
-  ArrayPrototypeSymbolIterator,
+  uncurryThis(Array.prototype[Symbol.iterator]),
   ArrayIteratorPrototypeNext
 );

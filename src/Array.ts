@@ -1,6 +1,7 @@
-import { applyBind, uncurryThis } from "./util.js";
+import { applyBind } from "./applyBind.js";
+import { uncurryThis } from "./uncurryThis.js";
 
-export default Array;
+export const Array = globalThis.Array;
 export const ArrayLength = Array.length;
 export const ArrayName = Array.name;
 export const ArrayPrototype = Array.prototype;
@@ -12,7 +13,9 @@ export const ArrayGetSymbolSpecies = uncurryThis(
   Object.getOwnPropertyDescriptor(Array, Symbol.species)!.get!
 );
 export const ArrayPrototypeLength = Array.prototype.length;
-export const ArrayPrototypeConstructor = Array.prototype.constructor;
+export const ArrayPrototypeConstructor = uncurryThis(
+  Array.prototype.constructor
+);
 export const ArrayPrototypeAt = uncurryThis(Array.prototype.at);
 export const ArrayPrototypeConcat = uncurryThis(Array.prototype.concat);
 export const ArrayPrototypeCopyWithin = uncurryThis(Array.prototype.copyWithin);

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "NodeNext",
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true
+  }
+}
