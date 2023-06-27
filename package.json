@@ -1,5 +1,4 @@
 {
-  "type": "commonjs",
   "name": "@jcbhmr/node-primordials",
   "version": "1.0.0",
   "description": "",
@@ -10,13 +9,11 @@
   },
   "scripts": {
     "start": "tsx --test --watch test/*.test.ts",
-    "test": "tsx --test test/*.test.ts"
+    "test": "tsx --test test/*.test.ts",
+    "build:docs": "vitepress build docs",
+    "docs:dev": "vitepress dev docs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
-    "tsd": "^0.28.1",
-    "zx": "^7.2.2"
+    "vitepress": "^1.0.0-beta.2"
   }
 }
