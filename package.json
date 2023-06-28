@@ -9,18 +9,16 @@
     "./internal/*": null
   },
   "scripts": {
+    "build": "tsc",
     "build:docs": "typedoc",
-    "build": "tsc && shx cp src/RegExp.js src/RegExp.d.ts dist",
-    "start": "tsx --test --watch test/*.test.mts",
+    "lint": "prettier --ignore-path .gitignore -w . && tsc --noEmit",
     "test": "tsx --test test/*.test.mts"
   },
   "devDependencies": {
     "@types/node": "^20.3.2",
-    "change-case": "^4.1.2",
     "prettier": "^2.8.8",
     "prettier-plugin-jsdoc": "^0.4.2",
     "prettier-plugin-packagejson": "^2.4.3",
-    "shx": "^0.3.4",
     "tsx": "^3.12.7",
     "typedoc": "^0.24.8",
     "typescript": "^5.1.3"
