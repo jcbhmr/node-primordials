@@ -1,6 +1,4 @@
-
-      const FinalizationRegistryPrototypeConstructor = Function.call.bind(
-        FinalizationRegistry.prototype.constructor
-      );
-      export = FinalizationRegistryPrototypeConstructor;
-    
+const FinalizationRegistryPrototypeConstructor = Function.call.bind(
+  FinalizationRegistry.prototype.constructor
+);
+export = FinalizationRegistryPrototypeConstructor;

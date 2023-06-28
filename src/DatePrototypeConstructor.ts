@@ -1,6 +1,2 @@
-
-      const DatePrototypeConstructor = Function.call.bind(
-        Date.prototype.constructor
-      );
-      export = DatePrototypeConstructor;
-    
+const DatePrototypeConstructor = Function.call.bind(Date.prototype.constructor);
+export = DatePrototypeConstructor;

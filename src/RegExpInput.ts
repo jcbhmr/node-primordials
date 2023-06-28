@@ -1,4 +1,2 @@
-
-      const RegExpInput = RegExp.input;
-      export = RegExpInput;
-    
+const RegExpInput = RegExp.input;
+export = RegExpInput;

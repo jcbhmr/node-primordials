@@ -1,4 +1,2 @@
-
-      const FunctionLength = Function.length;
-      export = FunctionLength;
-    
+const FunctionLength = Function.length;
+export = FunctionLength;

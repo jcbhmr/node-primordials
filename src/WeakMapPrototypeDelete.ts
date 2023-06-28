@@ -1,6 +1,2 @@
-
-      const WeakMapPrototypeDelete = Function.call.bind(
-        WeakMap.prototype.delete
-      );
-      export = WeakMapPrototypeDelete;
-    
+const WeakMapPrototypeDelete = Function.call.bind(WeakMap.prototype.delete);
+export = WeakMapPrototypeDelete;

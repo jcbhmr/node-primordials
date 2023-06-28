@@ -1,6 +1,4 @@
-
-      const TypeErrorPrototypeMessage = Function.call.bind(
-        TypeError.prototype.message
-      );
-      export = TypeErrorPrototypeMessage;
-    
+const TypeErrorPrototypeMessage = Function.call.bind(
+  TypeError.prototype.message
+);
+export = TypeErrorPrototypeMessage;

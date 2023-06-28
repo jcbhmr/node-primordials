@@ -1,4 +1,2 @@
-
-      const ReferenceErrorPrototype = ReferenceError.prototype;
-      export = ReferenceErrorPrototype;
-    
+const ReferenceErrorPrototype = ReferenceError.prototype;
+export = ReferenceErrorPrototype;

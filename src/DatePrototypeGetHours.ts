@@ -1,6 +1,2 @@
-
-      const DatePrototypeGetHours = Function.call.bind(
-        Date.prototype.getHours
-      );
-      export = DatePrototypeGetHours;
-    
+const DatePrototypeGetHours = Function.call.bind(Date.prototype.getHours);
+export = DatePrototypeGetHours;

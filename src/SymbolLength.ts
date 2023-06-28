@@ -1,4 +1,2 @@
-
-      const SymbolLength = Symbol.length;
-      export = SymbolLength;
-    
+const SymbolLength = Symbol.length;
+export = SymbolLength;

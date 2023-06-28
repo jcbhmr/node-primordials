@@ -1,4 +1,2 @@
-
-      const MathExp = Math.MathExp;
-      export = MathExp;
-    
+const MathExp = Math.MathExp;
+export = MathExp;

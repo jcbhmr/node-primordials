@@ -1,4 +1,2 @@
-
-    const eval = globalThis.eval;
-    export = eval;
-  
+const eval = globalThis.eval;
+export = eval;

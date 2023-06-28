@@ -1,4 +1,2 @@
-
-      const ObjectSeal = Object.seal;
-      export = ObjectSeal;
-    
+const ObjectSeal = Object.seal;
+export = ObjectSeal;

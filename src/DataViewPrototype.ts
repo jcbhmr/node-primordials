@@ -1,4 +1,2 @@
-
-      const DataViewPrototype = DataView.prototype;
-      export = DataViewPrototype;
-    
+const DataViewPrototype = DataView.prototype;
+export = DataViewPrototype;

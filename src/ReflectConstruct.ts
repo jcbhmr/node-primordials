@@ -1,4 +1,2 @@
-
-      const ReflectConstruct = Reflect.ReflectConstruct;
-      export = ReflectConstruct;
-    
+const ReflectConstruct = Reflect.ReflectConstruct;
+export = ReflectConstruct;

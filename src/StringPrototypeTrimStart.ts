@@ -1,6 +1,2 @@
-
-      const StringPrototypeTrimStart = Function.call.bind(
-        String.prototype.trimStart
-      );
-      export = StringPrototypeTrimStart;
-    
+const StringPrototypeTrimStart = Function.call.bind(String.prototype.trimStart);
+export = StringPrototypeTrimStart;

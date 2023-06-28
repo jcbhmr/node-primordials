@@ -1,4 +1,2 @@
-
-      const ArrayName = Array.name;
-      export = ArrayName;
-    
+const ArrayName = Array.name;
+export = ArrayName;

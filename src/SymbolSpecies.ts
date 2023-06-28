@@ -1,4 +1,2 @@
-
-      const SymbolSpecies = Symbol.species;
-      export = SymbolSpecies;
-    
+const SymbolSpecies = Symbol.species;
+export = SymbolSpecies;

@@ -1,4 +1,2 @@
-
-      const SetPrototype = Set.prototype;
-      export = SetPrototype;
-    
+const SetPrototype = Set.prototype;
+export = SetPrototype;

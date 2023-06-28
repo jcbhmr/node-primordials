@@ -1,4 +1,2 @@
-
-      const SyntaxErrorPrototype = SyntaxError.prototype;
-      export = SyntaxErrorPrototype;
-    
+const SyntaxErrorPrototype = SyntaxError.prototype;
+export = SyntaxErrorPrototype;

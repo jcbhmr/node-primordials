@@ -1,4 +1,2 @@
-
-      const ArrayPrototype = Array.prototype;
-      export = ArrayPrototype;
-    
+const ArrayPrototype = Array.prototype;
+export = ArrayPrototype;

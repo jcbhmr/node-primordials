@@ -1,4 +1,2 @@
-
-      const MathPow = Math.MathPow;
-      export = MathPow;
-    
+const MathPow = Math.MathPow;
+export = MathPow;

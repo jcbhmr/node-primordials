@@ -1,4 +1,2 @@
-
-      const DateNow = Date.now;
-      export = DateNow;
-    
+const DateNow = Date.now;
+export = DateNow;

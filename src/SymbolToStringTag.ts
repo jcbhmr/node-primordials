@@ -1,4 +1,2 @@
-
-      const SymbolToStringTag = Symbol.toStringTag;
-      export = SymbolToStringTag;
-    
+const SymbolToStringTag = Symbol.toStringTag;
+export = SymbolToStringTag;

@@ -1,6 +1,2 @@
-
-      const StringPrototypeLength = Function.call.bind(
-        String.prototype.length
-      );
-      export = StringPrototypeLength;
-    
+const StringPrototypeLength = Function.call.bind(String.prototype.length);
+export = StringPrototypeLength;

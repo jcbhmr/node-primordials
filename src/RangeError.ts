@@ -1,4 +1,2 @@
-
-    const RangeError = globalThis.RangeError;
-    export = RangeError;
-  
+const RangeError = globalThis.RangeError;
+export = RangeError;

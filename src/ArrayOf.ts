@@ -1,4 +1,2 @@
-
-      const ArrayOf = Array.of;
-      export = ArrayOf;
-    
+const ArrayOf = Array.of;
+export = ArrayOf;

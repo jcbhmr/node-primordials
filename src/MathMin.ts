@@ -1,4 +1,2 @@
-
-      const MathMin = Math.MathMin;
-      export = MathMin;
-    
+const MathMin = Math.MathMin;
+export = MathMin;

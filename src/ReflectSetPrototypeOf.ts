@@ -1,4 +1,2 @@
-
-      const ReflectSetPrototypeOf = Reflect.ReflectSetPrototypeOf;
-      export = ReflectSetPrototypeOf;
-    
+const ReflectSetPrototypeOf = Reflect.ReflectSetPrototypeOf;
+export = ReflectSetPrototypeOf;

@@ -1,4 +1,2 @@
-
-      const WeakMapPrototype = WeakMap.prototype;
-      export = WeakMapPrototype;
-    
+const WeakMapPrototype = WeakMap.prototype;
+export = WeakMapPrototype;

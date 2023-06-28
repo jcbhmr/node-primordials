@@ -1,4 +1,2 @@
-
-      const ReflectIsExtensible = Reflect.ReflectIsExtensible;
-      export = ReflectIsExtensible;
-    
+const ReflectIsExtensible = Reflect.ReflectIsExtensible;
+export = ReflectIsExtensible;

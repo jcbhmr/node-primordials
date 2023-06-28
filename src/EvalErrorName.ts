@@ -1,4 +1,2 @@
-
-      const EvalErrorName = EvalError.name;
-      export = EvalErrorName;
-    
+const EvalErrorName = EvalError.name;
+export = EvalErrorName;

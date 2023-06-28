@@ -1,4 +1,2 @@
-
-      const ErrorPrototype = Error.prototype;
-      export = ErrorPrototype;
-    
+const ErrorPrototype = Error.prototype;
+export = ErrorPrototype;

@@ -1,4 +1,2 @@
-
-    const JSON = globalThis.JSON;
-    export = JSON;
-  
+const JSON = globalThis.JSON;
+export = JSON;

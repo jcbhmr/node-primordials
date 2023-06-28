@@ -1,6 +1,4 @@
-
-      const ObjectPrototypePropertyIsEnumerable = Function.call.bind(
-        Object.prototype.propertyIsEnumerable
-      );
-      export = ObjectPrototypePropertyIsEnumerable;
-    
+const ObjectPrototypePropertyIsEnumerable = Function.call.bind(
+  Object.prototype.propertyIsEnumerable
+);
+export = ObjectPrototypePropertyIsEnumerable;

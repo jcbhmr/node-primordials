@@ -1,4 +1,2 @@
-
-      const ReferenceErrorLength = ReferenceError.length;
-      export = ReferenceErrorLength;
-    
+const ReferenceErrorLength = ReferenceError.length;
+export = ReferenceErrorLength;

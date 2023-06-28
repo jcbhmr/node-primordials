@@ -1,4 +1,2 @@
-
-      const DateLength = Date.length;
-      export = DateLength;
-    
+const DateLength = Date.length;
+export = DateLength;

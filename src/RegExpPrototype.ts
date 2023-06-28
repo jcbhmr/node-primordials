@@ -1,4 +1,2 @@
-
-      const RegExpPrototype = RegExp.prototype;
-      export = RegExpPrototype;
-    
+const RegExpPrototype = RegExp.prototype;
+export = RegExpPrototype;

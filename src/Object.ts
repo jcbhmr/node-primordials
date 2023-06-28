@@ -1,4 +1,2 @@
-
-    const Object = globalThis.Object;
-    export = Object;
-  
+const Object = globalThis.Object;
+export = Object;

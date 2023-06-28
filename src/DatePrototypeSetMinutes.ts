@@ -1,6 +1,2 @@
-
-      const DatePrototypeSetMinutes = Function.call.bind(
-        Date.prototype.setMinutes
-      );
-      export = DatePrototypeSetMinutes;
-    
+const DatePrototypeSetMinutes = Function.call.bind(Date.prototype.setMinutes);
+export = DatePrototypeSetMinutes;

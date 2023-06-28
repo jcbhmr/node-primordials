@@ -1,4 +1,2 @@
-
-      const TypeErrorName = TypeError.name;
-      export = TypeErrorName;
-    
+const TypeErrorName = TypeError.name;
+export = TypeErrorName;

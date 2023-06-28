@@ -1,6 +1,2 @@
-
-      const DatePrototypeSetYear = Function.call.bind(
-        Date.prototype.setYear
-      );
-      export = DatePrototypeSetYear;
-    
+const DatePrototypeSetYear = Function.call.bind(Date.prototype.setYear);
+export = DatePrototypeSetYear;

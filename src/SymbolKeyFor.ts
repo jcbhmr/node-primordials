@@ -1,4 +1,2 @@
-
-      const SymbolKeyFor = Symbol.keyFor;
-      export = SymbolKeyFor;
-    
+const SymbolKeyFor = Symbol.keyFor;
+export = SymbolKeyFor;

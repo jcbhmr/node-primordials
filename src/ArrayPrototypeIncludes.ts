@@ -1,6 +1,2 @@
-
-      const ArrayPrototypeIncludes = Function.call.bind(
-        Array.prototype.includes
-      );
-      export = ArrayPrototypeIncludes;
-    
+const ArrayPrototypeIncludes = Function.call.bind(Array.prototype.includes);
+export = ArrayPrototypeIncludes;

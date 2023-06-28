@@ -1,4 +1,2 @@
-
-      const StringName = String.name;
-      export = StringName;
-    
+const StringName = String.name;
+export = StringName;

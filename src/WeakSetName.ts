@@ -1,4 +1,2 @@
-
-      const WeakSetName = WeakSet.name;
-      export = WeakSetName;
-    
+const WeakSetName = WeakSet.name;
+export = WeakSetName;

@@ -1,4 +1,2 @@
-
-      const SymbolIterator = Symbol.iterator;
-      export = SymbolIterator;
-    
+const SymbolIterator = Symbol.iterator;
+export = SymbolIterator;

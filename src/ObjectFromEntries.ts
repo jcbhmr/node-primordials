@@ -1,4 +1,2 @@
-
-      const ObjectFromEntries = Object.fromEntries;
-      export = ObjectFromEntries;
-    
+const ObjectFromEntries = Object.fromEntries;
+export = ObjectFromEntries;

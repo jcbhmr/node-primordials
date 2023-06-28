@@ -1,4 +1,2 @@
-
-      const ErrorStackTraceLimit = Error.stackTraceLimit;
-      export = ErrorStackTraceLimit;
-    
+const ErrorStackTraceLimit = Error.stackTraceLimit;
+export = ErrorStackTraceLimit;

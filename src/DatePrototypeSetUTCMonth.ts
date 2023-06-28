@@ -1,6 +1,2 @@
-
-      const DatePrototypeSetUTCMonth = Function.call.bind(
-        Date.prototype.setUTCMonth
-      );
-      export = DatePrototypeSetUTCMonth;
-    
+const DatePrototypeSetUTCMonth = Function.call.bind(Date.prototype.setUTCMonth);
+export = DatePrototypeSetUTCMonth;

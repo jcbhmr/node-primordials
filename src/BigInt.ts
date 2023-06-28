@@ -1,4 +1,2 @@
-
-    const BigInt = globalThis.BigInt;
-    export = BigInt;
-  
+const BigInt = globalThis.BigInt;
+export = BigInt;

@@ -1,4 +1,2 @@
-
-      const AggregateErrorName = AggregateError.name;
-      export = AggregateErrorName;
-    
+const AggregateErrorName = AggregateError.name;
+export = AggregateErrorName;

@@ -1,4 +1,2 @@
-
-      const SymbolMatchAll = Symbol.matchAll;
-      export = SymbolMatchAll;
-    
+const SymbolMatchAll = Symbol.matchAll;
+export = SymbolMatchAll;

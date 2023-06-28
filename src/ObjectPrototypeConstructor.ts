@@ -1,6 +1,4 @@
-
-      const ObjectPrototypeConstructor = Function.call.bind(
-        Object.prototype.constructor
-      );
-      export = ObjectPrototypeConstructor;
-    
+const ObjectPrototypeConstructor = Function.call.bind(
+  Object.prototype.constructor
+);
+export = ObjectPrototypeConstructor;

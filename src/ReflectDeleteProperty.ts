@@ -1,4 +1,2 @@
-
-      const ReflectDeleteProperty = Reflect.ReflectDeleteProperty;
-      export = ReflectDeleteProperty;
-    
+const ReflectDeleteProperty = Reflect.ReflectDeleteProperty;
+export = ReflectDeleteProperty;

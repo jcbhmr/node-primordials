@@ -1,4 +1,2 @@
-
-      const BigIntLength = BigInt.length;
-      export = BigIntLength;
-    
+const BigIntLength = BigInt.length;
+export = BigIntLength;

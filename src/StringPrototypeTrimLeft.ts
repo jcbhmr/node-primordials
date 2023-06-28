@@ -1,6 +1,2 @@
-
-      const StringPrototypeTrimLeft = Function.call.bind(
-        String.prototype.trimLeft
-      );
-      export = StringPrototypeTrimLeft;
-    
+const StringPrototypeTrimLeft = Function.call.bind(String.prototype.trimLeft);
+export = StringPrototypeTrimLeft;

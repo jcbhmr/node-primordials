@@ -1,4 +1,2 @@
-
-      const ReflectHas = Reflect.ReflectHas;
-      export = ReflectHas;
-    
+const ReflectHas = Reflect.ReflectHas;
+export = ReflectHas;

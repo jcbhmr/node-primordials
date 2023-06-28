@@ -1,4 +1,2 @@
-
-      const RegExpName = RegExp.name;
-      export = RegExpName;
-    
+const RegExpName = RegExp.name;
+export = RegExpName;

@@ -1,4 +1,2 @@
-
-      const ErrorCaptureStackTrace = Error.captureStackTrace;
-      export = ErrorCaptureStackTrace;
-    
+const ErrorCaptureStackTrace = Error.captureStackTrace;
+export = ErrorCaptureStackTrace;

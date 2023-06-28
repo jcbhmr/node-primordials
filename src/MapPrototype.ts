@@ -1,4 +1,2 @@
-
-      const MapPrototype = Map.prototype;
-      export = MapPrototype;
-    
+const MapPrototype = Map.prototype;
+export = MapPrototype;

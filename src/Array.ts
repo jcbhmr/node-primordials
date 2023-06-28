@@ -1,4 +1,2 @@
-
-    const Array = globalThis.Array;
-    export = Array;
-  
+const Array = globalThis.Array;
+export = Array;

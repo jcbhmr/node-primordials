@@ -1,4 +1,2 @@
-
-      const ProxyRevocable = Proxy.ProxyRevocable;
-      export = ProxyRevocable;
-    
+const ProxyRevocable = Proxy.ProxyRevocable;
+export = ProxyRevocable;

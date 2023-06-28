@@ -1,6 +1,2 @@
-
-      const ArrayPrototypeFlatMap = Function.call.bind(
-        Array.prototype.flatMap
-      );
-      export = ArrayPrototypeFlatMap;
-    
+const ArrayPrototypeFlatMap = Function.call.bind(Array.prototype.flatMap);
+export = ArrayPrototypeFlatMap;

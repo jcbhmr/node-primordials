@@ -1,4 +1,2 @@
-
-      const RegExpLastMatch = RegExp.lastMatch;
-      export = RegExpLastMatch;
-    
+const RegExpLastMatch = RegExp.lastMatch;
+export = RegExpLastMatch;

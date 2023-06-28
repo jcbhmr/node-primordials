@@ -1,6 +1,4 @@
-
-      const ObjectPrototypeHasOwnProperty = Function.call.bind(
-        Object.prototype.hasOwnProperty
-      );
-      export = ObjectPrototypeHasOwnProperty;
-    
+const ObjectPrototypeHasOwnProperty = Function.call.bind(
+  Object.prototype.hasOwnProperty
+);
+export = ObjectPrototypeHasOwnProperty;

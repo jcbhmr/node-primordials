@@ -1,4 +1,2 @@
-
-    const WeakSet = globalThis.WeakSet;
-    export = WeakSet;
-  
+const WeakSet = globalThis.WeakSet;
+export = WeakSet;

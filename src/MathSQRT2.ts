@@ -1,4 +1,2 @@
-
-      const MathSQRT2 = Math.MathSQRT2;
-      export = MathSQRT2;
-    
+const MathSQRT2 = Math.MathSQRT2;
+export = MathSQRT2;

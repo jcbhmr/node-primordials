@@ -1,4 +1,2 @@
-
-      const NumberIsFinite = Number.isFinite;
-      export = NumberIsFinite;
-    
+const NumberIsFinite = Number.isFinite;
+export = NumberIsFinite;

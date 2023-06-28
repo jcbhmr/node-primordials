@@ -1,4 +1,2 @@
-
-      const DataViewLength = DataView.length;
-      export = DataViewLength;
-    
+const DataViewLength = DataView.length;
+export = DataViewLength;

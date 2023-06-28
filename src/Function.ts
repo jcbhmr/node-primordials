@@ -1,4 +1,2 @@
-
-    const Function = globalThis.Function;
-    export = Function;
-  
+const Function = globalThis.Function;
+export = Function;

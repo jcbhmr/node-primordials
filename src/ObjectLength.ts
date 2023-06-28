@@ -1,4 +1,2 @@
-
-      const ObjectLength = Object.length;
-      export = ObjectLength;
-    
+const ObjectLength = Object.length;
+export = ObjectLength;

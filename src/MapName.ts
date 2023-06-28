@@ -1,4 +1,2 @@
-
-      const MapName = Map.name;
-      export = MapName;
-    
+const MapName = Map.name;
+export = MapName;

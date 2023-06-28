@@ -1,6 +1,4 @@
-
-      const DatePrototypeGetUTCMilliseconds = Function.call.bind(
-        Date.prototype.getUTCMilliseconds
-      );
-      export = DatePrototypeGetUTCMilliseconds;
-    
+const DatePrototypeGetUTCMilliseconds = Function.call.bind(
+  Date.prototype.getUTCMilliseconds
+);
+export = DatePrototypeGetUTCMilliseconds;

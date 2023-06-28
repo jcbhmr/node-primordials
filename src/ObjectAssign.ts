@@ -1,4 +1,2 @@
-
-      const ObjectAssign = Object.assign;
-      export = ObjectAssign;
-    
+const ObjectAssign = Object.assign;
+export = ObjectAssign;

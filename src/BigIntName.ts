@@ -1,4 +1,2 @@
-
-      const BigIntName = BigInt.name;
-      export = BigIntName;
-    
+const BigIntName = BigInt.name;
+export = BigIntName;

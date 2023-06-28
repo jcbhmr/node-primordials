@@ -1,4 +1,2 @@
-
-      const DateName = Date.name;
-      export = DateName;
-    
+const DateName = Date.name;
+export = DateName;

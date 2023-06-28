@@ -1,6 +1,2 @@
-
-      const StringPrototypeBlink = Function.call.bind(
-        String.prototype.blink
-      );
-      export = StringPrototypeBlink;
-    
+const StringPrototypeBlink = Function.call.bind(String.prototype.blink);
+export = StringPrototypeBlink;

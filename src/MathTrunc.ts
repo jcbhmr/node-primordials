@@ -1,4 +1,2 @@
-
-      const MathTrunc = Math.MathTrunc;
-      export = MathTrunc;
-    
+const MathTrunc = Math.MathTrunc;
+export = MathTrunc;

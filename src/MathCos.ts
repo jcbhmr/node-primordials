@@ -1,4 +1,2 @@
-
-      const MathCos = Math.MathCos;
-      export = MathCos;
-    
+const MathCos = Math.MathCos;
+export = MathCos;

@@ -1,4 +1,2 @@
-
-      const NumberPOSITIVE_INFINITY = Number.POSITIVE_INFINITY;
-      export = NumberPOSITIVE_INFINITY;
-    
+const NumberPOSITIVE_INFINITY = Number.POSITIVE_INFINITY;
+export = NumberPOSITIVE_INFINITY;

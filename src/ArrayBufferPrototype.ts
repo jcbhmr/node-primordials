@@ -1,4 +1,2 @@
-
-      const ArrayBufferPrototype = ArrayBuffer.prototype;
-      export = ArrayBufferPrototype;
-    
+const ArrayBufferPrototype = ArrayBuffer.prototype;
+export = ArrayBufferPrototype;

@@ -1,4 +1,2 @@
-
-      const ObjectFreeze = Object.freeze;
-      export = ObjectFreeze;
-    
+const ObjectFreeze = Object.freeze;
+export = ObjectFreeze;

@@ -1,4 +1,2 @@
-
-      const RegExpLeftContext = RegExp.leftContext;
-      export = RegExpLeftContext;
-    
+const RegExpLeftContext = RegExp.leftContext;
+export = RegExpLeftContext;

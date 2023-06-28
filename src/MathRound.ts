@@ -1,4 +1,2 @@
-
-      const MathRound = Math.MathRound;
-      export = MathRound;
-    
+const MathRound = Math.MathRound;
+export = MathRound;

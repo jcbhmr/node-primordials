@@ -1,4 +1,2 @@
-
-      const SymbolSearch = Symbol.search;
-      export = SymbolSearch;
-    
+const SymbolSearch = Symbol.search;
+export = SymbolSearch;

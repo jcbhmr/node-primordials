@@ -1,4 +1,2 @@
-
-      const ObjectIsSealed = Object.isSealed;
-      export = ObjectIsSealed;
-    
+const ObjectIsSealed = Object.isSealed;
+export = ObjectIsSealed;

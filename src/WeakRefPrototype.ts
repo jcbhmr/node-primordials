@@ -1,4 +1,2 @@
-
-      const WeakRefPrototype = WeakRef.prototype;
-      export = WeakRefPrototype;
-    
+const WeakRefPrototype = WeakRef.prototype;
+export = WeakRefPrototype;

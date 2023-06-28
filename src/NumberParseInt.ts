@@ -1,4 +1,2 @@
-
-      const NumberParseInt = Number.parseInt;
-      export = NumberParseInt;
-    
+const NumberParseInt = Number.parseInt;
+export = NumberParseInt;

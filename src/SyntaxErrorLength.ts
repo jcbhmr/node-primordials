@@ -1,4 +1,2 @@
-
-      const SyntaxErrorLength = SyntaxError.length;
-      export = SyntaxErrorLength;
-    
+const SyntaxErrorLength = SyntaxError.length;
+export = SyntaxErrorLength;

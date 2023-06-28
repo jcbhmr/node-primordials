@@ -1,6 +1,4 @@
-
-      const DatePrototypeSetMilliseconds = Function.call.bind(
-        Date.prototype.setMilliseconds
-      );
-      export = DatePrototypeSetMilliseconds;
-    
+const DatePrototypeSetMilliseconds = Function.call.bind(
+  Date.prototype.setMilliseconds
+);
+export = DatePrototypeSetMilliseconds;

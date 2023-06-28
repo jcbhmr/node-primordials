@@ -1,4 +1,2 @@
-
-      const MathHypot = Math.MathHypot;
-      export = MathHypot;
-    
+const MathHypot = Math.MathHypot;
+export = MathHypot;

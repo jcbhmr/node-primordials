@@ -1,6 +1,2 @@
-
-      const WeakMapPrototypeGet = Function.call.bind(
-        WeakMap.prototype.get
-      );
-      export = WeakMapPrototypeGet;
-    
+const WeakMapPrototypeGet = Function.call.bind(WeakMap.prototype.get);
+export = WeakMapPrototypeGet;

@@ -1,6 +1,2 @@
-
-      const DatePrototypeGetDay = Function.call.bind(
-        Date.prototype.getDay
-      );
-      export = DatePrototypeGetDay;
-    
+const DatePrototypeGetDay = Function.call.bind(Date.prototype.getDay);
+export = DatePrototypeGetDay;

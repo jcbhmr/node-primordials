@@ -1,4 +1,2 @@
-
-      const MathImul = Math.MathImul;
-      export = MathImul;
-    
+const MathImul = Math.MathImul;
+export = MathImul;

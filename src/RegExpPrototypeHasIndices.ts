@@ -1,6 +1,4 @@
-
-      const RegExpPrototypeHasIndices = Function.call.bind(
-        RegExp.prototype.hasIndices
-      );
-      export = RegExpPrototypeHasIndices;
-    
+const RegExpPrototypeHasIndices = Function.call.bind(
+  RegExp.prototype.hasIndices
+);
+export = RegExpPrototypeHasIndices;

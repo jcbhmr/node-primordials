@@ -1,4 +1,2 @@
-
-      const ReflectPreventExtensions = Reflect.ReflectPreventExtensions;
-      export = ReflectPreventExtensions;
-    
+const ReflectPreventExtensions = Reflect.ReflectPreventExtensions;
+export = ReflectPreventExtensions;

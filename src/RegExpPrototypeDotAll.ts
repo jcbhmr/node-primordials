@@ -1,6 +1,2 @@
-
-      const RegExpPrototypeDotAll = Function.call.bind(
-        RegExp.prototype.dotAll
-      );
-      export = RegExpPrototypeDotAll;
-    
+const RegExpPrototypeDotAll = Function.call.bind(RegExp.prototype.dotAll);
+export = RegExpPrototypeDotAll;

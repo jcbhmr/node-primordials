@@ -1,4 +1,2 @@
-
-      const ObjectEntries = Object.entries;
-      export = ObjectEntries;
-    
+const ObjectEntries = Object.entries;
+export = ObjectEntries;

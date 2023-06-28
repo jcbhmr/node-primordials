@@ -1,4 +1,2 @@
-
-      const RangeErrorName = RangeError.name;
-      export = RangeErrorName;
-    
+const RangeErrorName = RangeError.name;
+export = RangeErrorName;

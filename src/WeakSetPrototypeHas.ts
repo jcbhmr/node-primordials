@@ -1,6 +1,2 @@
-
-      const WeakSetPrototypeHas = Function.call.bind(
-        WeakSet.prototype.has
-      );
-      export = WeakSetPrototypeHas;
-    
+const WeakSetPrototypeHas = Function.call.bind(WeakSet.prototype.has);
+export = WeakSetPrototypeHas;

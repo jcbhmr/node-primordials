@@ -1,4 +1,2 @@
-
-    const URIError = globalThis.URIError;
-    export = URIError;
-  
+const URIError = globalThis.URIError;
+export = URIError;

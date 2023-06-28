@@ -1,6 +1,2 @@
-
-      const DatePrototypeToGMTString = Function.call.bind(
-        Date.prototype.toGMTString
-      );
-      export = DatePrototypeToGMTString;
-    
+const DatePrototypeToGMTString = Function.call.bind(Date.prototype.toGMTString);
+export = DatePrototypeToGMTString;

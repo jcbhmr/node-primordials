@@ -1,6 +1,4 @@
-
-      const DataViewPrototypeSetUint32 = Function.call.bind(
-        DataView.prototype.setUint32
-      );
-      export = DataViewPrototypeSetUint32;
-    
+const DataViewPrototypeSetUint32 = Function.call.bind(
+  DataView.prototype.setUint32
+);
+export = DataViewPrototypeSetUint32;

@@ -1,4 +1,2 @@
-
-      const StringFromCharCode = String.fromCharCode;
-      export = StringFromCharCode;
-    
+const StringFromCharCode = String.fromCharCode;
+export = StringFromCharCode;

@@ -1,6 +1,2 @@
-
-      const DatePrototypeToISOString = Function.call.bind(
-        Date.prototype.toISOString
-      );
-      export = DatePrototypeToISOString;
-    
+const DatePrototypeToISOString = Function.call.bind(Date.prototype.toISOString);
+export = DatePrototypeToISOString;

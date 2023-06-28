@@ -1,6 +1,2 @@
-
-      const StringPrototypeConcat = Function.call.bind(
-        String.prototype.concat
-      );
-      export = StringPrototypeConcat;
-    
+const StringPrototypeConcat = Function.call.bind(String.prototype.concat);
+export = StringPrototypeConcat;

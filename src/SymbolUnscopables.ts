@@ -1,4 +1,2 @@
-
-      const SymbolUnscopables = Symbol.unscopables;
-      export = SymbolUnscopables;
-    
+const SymbolUnscopables = Symbol.unscopables;
+export = SymbolUnscopables;

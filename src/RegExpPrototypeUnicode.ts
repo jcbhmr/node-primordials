@@ -1,6 +1,2 @@
-
-      const RegExpPrototypeUnicode = Function.call.bind(
-        RegExp.prototype.unicode
-      );
-      export = RegExpPrototypeUnicode;
-    
+const RegExpPrototypeUnicode = Function.call.bind(RegExp.prototype.unicode);
+export = RegExpPrototypeUnicode;

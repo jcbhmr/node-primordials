@@ -1,6 +1,2 @@
-
-      const DatePrototypeGetFullYear = Function.call.bind(
-        Date.prototype.getFullYear
-      );
-      export = DatePrototypeGetFullYear;
-    
+const DatePrototypeGetFullYear = Function.call.bind(Date.prototype.getFullYear);
+export = DatePrototypeGetFullYear;

@@ -1,4 +1,2 @@
-
-      const ErrorLength = Error.length;
-      export = ErrorLength;
-    
+const ErrorLength = Error.length;
+export = ErrorLength;

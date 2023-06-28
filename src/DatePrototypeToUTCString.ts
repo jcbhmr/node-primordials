@@ -1,6 +1,2 @@
-
-      const DatePrototypeToUTCString = Function.call.bind(
-        Date.prototype.toUTCString
-      );
-      export = DatePrototypeToUTCString;
-    
+const DatePrototypeToUTCString = Function.call.bind(Date.prototype.toUTCString);
+export = DatePrototypeToUTCString;

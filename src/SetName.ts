@@ -1,4 +1,2 @@
-
-      const SetName = Set.name;
-      export = SetName;
-    
+const SetName = Set.name;
+export = SetName;

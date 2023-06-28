@@ -1,6 +1,2 @@
-
-      const SetPrototypeDelete = Function.call.bind(
-        Set.prototype.delete
-      );
-      export = SetPrototypeDelete;
-    
+const SetPrototypeDelete = Function.call.bind(Set.prototype.delete);
+export = SetPrototypeDelete;

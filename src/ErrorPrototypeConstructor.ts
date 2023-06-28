@@ -1,6 +1,4 @@
-
-      const ErrorPrototypeConstructor = Function.call.bind(
-        Error.prototype.constructor
-      );
-      export = ErrorPrototypeConstructor;
-    
+const ErrorPrototypeConstructor = Function.call.bind(
+  Error.prototype.constructor
+);
+export = ErrorPrototypeConstructor;

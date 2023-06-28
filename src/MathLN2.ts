@@ -1,4 +1,2 @@
-
-      const MathLN2 = Math.MathLN2;
-      export = MathLN2;
-    
+const MathLN2 = Math.MathLN2;
+export = MathLN2;

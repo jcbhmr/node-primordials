@@ -1,4 +1,2 @@
-
-      const ObjectKeys = Object.keys;
-      export = ObjectKeys;
-    
+const ObjectKeys = Object.keys;
+export = ObjectKeys;

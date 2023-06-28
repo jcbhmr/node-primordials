@@ -1,4 +1,2 @@
-
-      const ReferenceErrorName = ReferenceError.name;
-      export = ReferenceErrorName;
-    
+const ReferenceErrorName = ReferenceError.name;
+export = ReferenceErrorName;

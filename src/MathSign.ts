@@ -1,4 +1,2 @@
-
-      const MathSign = Math.MathSign;
-      export = MathSign;
-    
+const MathSign = Math.MathSign;
+export = MathSign;

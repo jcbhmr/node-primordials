@@ -1,4 +1,2 @@
-
-      const SymbolPrototype = Symbol.prototype;
-      export = SymbolPrototype;
-    
+const SymbolPrototype = Symbol.prototype;
+export = SymbolPrototype;

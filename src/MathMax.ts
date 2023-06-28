@@ -1,4 +1,2 @@
-
-      const MathMax = Math.MathMax;
-      export = MathMax;
-    
+const MathMax = Math.MathMax;
+export = MathMax;

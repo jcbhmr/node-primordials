@@ -1,4 +1,2 @@
-
-      const NumberIsSafeInteger = Number.isSafeInteger;
-      export = NumberIsSafeInteger;
-    
+const NumberIsSafeInteger = Number.isSafeInteger;
+export = NumberIsSafeInteger;

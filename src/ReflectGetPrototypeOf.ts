@@ -1,4 +1,2 @@
-
-      const ReflectGetPrototypeOf = Reflect.ReflectGetPrototypeOf;
-      export = ReflectGetPrototypeOf;
-    
+const ReflectGetPrototypeOf = Reflect.ReflectGetPrototypeOf;
+export = ReflectGetPrototypeOf;

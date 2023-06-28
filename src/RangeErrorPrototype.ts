@@ -1,4 +1,2 @@
-
-      const RangeErrorPrototype = RangeError.prototype;
-      export = RangeErrorPrototype;
-    
+const RangeErrorPrototype = RangeError.prototype;
+export = RangeErrorPrototype;

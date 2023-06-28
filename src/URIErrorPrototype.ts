@@ -1,4 +1,2 @@
-
-      const URIErrorPrototype = URIError.prototype;
-      export = URIErrorPrototype;
-    
+const URIErrorPrototype = URIError.prototype;
+export = URIErrorPrototype;

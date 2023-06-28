@@ -1,6 +1,2 @@
-
-      const ArrayPrototypeEntries = Function.call.bind(
-        Array.prototype.entries
-      );
-      export = ArrayPrototypeEntries;
-    
+const ArrayPrototypeEntries = Function.call.bind(Array.prototype.entries);
+export = ArrayPrototypeEntries;

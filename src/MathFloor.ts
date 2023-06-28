@@ -1,4 +1,2 @@
-
-      const MathFloor = Math.MathFloor;
-      export = MathFloor;
-    
+const MathFloor = Math.MathFloor;
+export = MathFloor;

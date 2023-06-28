@@ -1,4 +1,2 @@
-
-    const SyntaxError = globalThis.SyntaxError;
-    export = SyntaxError;
-  
+const SyntaxError = globalThis.SyntaxError;
+export = SyntaxError;

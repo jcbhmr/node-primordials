@@ -1,6 +1,4 @@
-
-      const StringPrototypeStartsWith = Function.call.bind(
-        String.prototype.startsWith
-      );
-      export = StringPrototypeStartsWith;
-    
+const StringPrototypeStartsWith = Function.call.bind(
+  String.prototype.startsWith
+);
+export = StringPrototypeStartsWith;

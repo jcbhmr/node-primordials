@@ -1,4 +1,2 @@
-
-      const ObjectValues = Object.values;
-      export = ObjectValues;
-    
+const ObjectValues = Object.values;
+export = ObjectValues;

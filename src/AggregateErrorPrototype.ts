@@ -1,4 +1,2 @@
-
-      const AggregateErrorPrototype = AggregateError.prototype;
-      export = AggregateErrorPrototype;
-    
+const AggregateErrorPrototype = AggregateError.prototype;
+export = AggregateErrorPrototype;

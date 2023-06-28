@@ -1,4 +1,2 @@
-
-      const ReflectApply = Reflect.ReflectApply;
-      export = ReflectApply;
-    
+const ReflectApply = Reflect.ReflectApply;
+export = ReflectApply;

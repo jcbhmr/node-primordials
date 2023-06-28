@@ -1,4 +1,2 @@
-
-      const BooleanPrototype = Boolean.prototype;
-      export = BooleanPrototype;
-    
+const BooleanPrototype = Boolean.prototype;
+export = BooleanPrototype;

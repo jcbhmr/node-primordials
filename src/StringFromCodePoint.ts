@@ -1,4 +1,2 @@
-
-      const StringFromCodePoint = String.fromCodePoint;
-      export = StringFromCodePoint;
-    
+const StringFromCodePoint = String.fromCodePoint;
+export = StringFromCodePoint;

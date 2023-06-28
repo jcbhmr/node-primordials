@@ -1,6 +1,2 @@
-
-      const ArrayPrototypeFill = Function.call.bind(
-        Array.prototype.fill
-      );
-      export = ArrayPrototypeFill;
-    
+const ArrayPrototypeFill = Function.call.bind(Array.prototype.fill);
+export = ArrayPrototypeFill;

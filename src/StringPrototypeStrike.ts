@@ -1,6 +1,2 @@
-
-      const StringPrototypeStrike = Function.call.bind(
-        String.prototype.strike
-      );
-      export = StringPrototypeStrike;
-    
+const StringPrototypeStrike = Function.call.bind(String.prototype.strike);
+export = StringPrototypeStrike;

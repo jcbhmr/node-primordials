@@ -1,4 +1,2 @@
-
-      const FinalizationRegistryPrototype = FinalizationRegistry.prototype;
-      export = FinalizationRegistryPrototype;
-    
+const FinalizationRegistryPrototype = FinalizationRegistry.prototype;
+export = FinalizationRegistryPrototype;

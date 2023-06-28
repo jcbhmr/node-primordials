@@ -1,4 +1,2 @@
-
-    const AggregateError = globalThis.AggregateError;
-    export = AggregateError;
-  
+const AggregateError = globalThis.AggregateError;
+export = AggregateError;

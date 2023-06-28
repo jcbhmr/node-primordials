@@ -1,4 +1,2 @@
-
-      const NumberEPSILON = Number.EPSILON;
-      export = NumberEPSILON;
-    
+const NumberEPSILON = Number.EPSILON;
+export = NumberEPSILON;

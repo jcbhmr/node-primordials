@@ -1,4 +1,2 @@
-
-      const SetLength = Set.length;
-      export = SetLength;
-    
+const SetLength = Set.length;
+export = SetLength;

@@ -1,6 +1,2 @@
-
-      const ArrayPrototypeShift = Function.call.bind(
-        Array.prototype.shift
-      );
-      export = ArrayPrototypeShift;
-    
+const ArrayPrototypeShift = Function.call.bind(Array.prototype.shift);
+export = ArrayPrototypeShift;

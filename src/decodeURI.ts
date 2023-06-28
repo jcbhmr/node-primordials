@@ -1,4 +1,2 @@
-
-    const decodeURI = globalThis.decodeURI;
-    export = decodeURI;
-  
+const decodeURI = globalThis.decodeURI;
+export = decodeURI;

@@ -1,6 +1,2 @@
-
-      const MapPrototypeForEach = Function.call.bind(
-        Map.prototype.forEach
-      );
-      export = MapPrototypeForEach;
-    
+const MapPrototypeForEach = Function.call.bind(Map.prototype.forEach);
+export = MapPrototypeForEach;

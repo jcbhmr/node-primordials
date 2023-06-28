@@ -1,4 +1,2 @@
-
-      const MathAbs = Math.MathAbs;
-      export = MathAbs;
-    
+const MathAbs = Math.MathAbs;
+export = MathAbs;

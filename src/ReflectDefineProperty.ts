@@ -1,4 +1,2 @@
-
-      const ReflectDefineProperty = Reflect.ReflectDefineProperty;
-      export = ReflectDefineProperty;
-    
+const ReflectDefineProperty = Reflect.ReflectDefineProperty;
+export = ReflectDefineProperty;

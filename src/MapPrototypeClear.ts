@@ -1,6 +1,2 @@
-
-      const MapPrototypeClear = Function.call.bind(
-        Map.prototype.clear
-      );
-      export = MapPrototypeClear;
-    
+const MapPrototypeClear = Function.call.bind(Map.prototype.clear);
+export = MapPrototypeClear;

@@ -1,4 +1,2 @@
-
-      const NumberIsNaN = Number.isNaN;
-      export = NumberIsNaN;
-    
+const NumberIsNaN = Number.isNaN;
+export = NumberIsNaN;

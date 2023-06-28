@@ -1,4 +1,2 @@
-
-      const MathTanh = Math.MathTanh;
-      export = MathTanh;
-    
+const MathTanh = Math.MathTanh;
+export = MathTanh;

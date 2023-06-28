@@ -1,4 +1,2 @@
-
-      const MathSinh = Math.MathSinh;
-      export = MathSinh;
-    
+const MathSinh = Math.MathSinh;
+export = MathSinh;

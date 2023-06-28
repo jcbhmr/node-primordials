@@ -1,4 +1,2 @@
-
-      const NumberPrototype = Number.prototype;
-      export = NumberPrototype;
-    
+const NumberPrototype = Number.prototype;
+export = NumberPrototype;

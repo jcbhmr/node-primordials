@@ -1,4 +1,2 @@
-
-      const ObjectPrototype = Object.prototype;
-      export = ObjectPrototype;
-    
+const ObjectPrototype = Object.prototype;
+export = ObjectPrototype;

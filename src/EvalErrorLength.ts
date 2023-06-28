@@ -1,4 +1,2 @@
-
-      const EvalErrorLength = EvalError.length;
-      export = EvalErrorLength;
-    
+const EvalErrorLength = EvalError.length;
+export = EvalErrorLength;

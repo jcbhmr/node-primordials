@@ -1,4 +1,2 @@
-
-      const MathLog = Math.MathLog;
-      export = MathLog;
-    
+const MathLog = Math.MathLog;
+export = MathLog;

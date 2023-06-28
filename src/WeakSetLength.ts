@@ -1,4 +1,2 @@
-
-      const WeakSetLength = WeakSet.length;
-      export = WeakSetLength;
-    
+const WeakSetLength = WeakSet.length;
+export = WeakSetLength;

@@ -1,6 +1,2 @@
-
-      const RangeErrorPrototypeName = Function.call.bind(
-        RangeError.prototype.name
-      );
-      export = RangeErrorPrototypeName;
-    
+const RangeErrorPrototypeName = Function.call.bind(RangeError.prototype.name);
+export = RangeErrorPrototypeName;

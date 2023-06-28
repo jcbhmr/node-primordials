@@ -1,4 +1,2 @@
-
-    const RegExp = globalThis.RegExp;
-    export = RegExp;
-  
+const RegExp = globalThis.RegExp;
+export = RegExp;

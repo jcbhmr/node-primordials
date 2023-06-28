@@ -1,6 +1,4 @@
-
-      const StringPrototypeLastIndexOf = Function.call.bind(
-        String.prototype.lastIndexOf
-      );
-      export = StringPrototypeLastIndexOf;
-    
+const StringPrototypeLastIndexOf = Function.call.bind(
+  String.prototype.lastIndexOf
+);
+export = StringPrototypeLastIndexOf;

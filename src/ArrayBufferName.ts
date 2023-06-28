@@ -1,4 +1,2 @@
-
-      const ArrayBufferName = ArrayBuffer.name;
-      export = ArrayBufferName;
-    
+const ArrayBufferName = ArrayBuffer.name;
+export = ArrayBufferName;

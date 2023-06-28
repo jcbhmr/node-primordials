@@ -1,4 +1,2 @@
-
-      const ErrorName = Error.name;
-      export = ErrorName;
-    
+const ErrorName = Error.name;
+export = ErrorName;

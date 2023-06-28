@@ -1,6 +1,4 @@
-
-      const DatePrototypeToDateString = Function.call.bind(
-        Date.prototype.toDateString
-      );
-      export = DatePrototypeToDateString;
-    
+const DatePrototypeToDateString = Function.call.bind(
+  Date.prototype.toDateString
+);
+export = DatePrototypeToDateString;

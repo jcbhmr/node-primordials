@@ -1,4 +1,2 @@
-
-    const Symbol = globalThis.Symbol;
-    export = Symbol;
-  
+const Symbol = globalThis.Symbol;
+export = Symbol;

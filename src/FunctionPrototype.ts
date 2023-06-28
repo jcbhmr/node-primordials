@@ -1,4 +1,2 @@
-
-      const FunctionPrototype = Function.prototype;
-      export = FunctionPrototype;
-    
+const FunctionPrototype = Function.prototype;
+export = FunctionPrototype;

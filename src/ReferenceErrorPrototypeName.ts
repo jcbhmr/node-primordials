@@ -1,6 +1,4 @@
-
-      const ReferenceErrorPrototypeName = Function.call.bind(
-        ReferenceError.prototype.name
-      );
-      export = ReferenceErrorPrototypeName;
-    
+const ReferenceErrorPrototypeName = Function.call.bind(
+  ReferenceError.prototype.name
+);
+export = ReferenceErrorPrototypeName;

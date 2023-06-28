@@ -1,4 +1,2 @@
-
-    const Math = globalThis.Math;
-    export = Math;
-  
+const Math = globalThis.Math;
+export = Math;

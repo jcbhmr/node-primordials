@@ -1,4 +1,2 @@
-
-      const MathCosh = Math.MathCosh;
-      export = MathCosh;
-    
+const MathCosh = Math.MathCosh;
+export = MathCosh;

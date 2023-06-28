@@ -1,4 +1,2 @@
-
-      const RegExpLength = RegExp.length;
-      export = RegExpLength;
-    
+const RegExpLength = RegExp.length;
+export = RegExpLength;

@@ -1,4 +1,2 @@
-
-      const MathAtan = Math.MathAtan;
-      export = MathAtan;
-    
+const MathAtan = Math.MathAtan;
+export = MathAtan;

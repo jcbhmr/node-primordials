@@ -1,6 +1,2 @@
-
-      const MapPrototypeDelete = Function.call.bind(
-        Map.prototype.delete
-      );
-      export = MapPrototypeDelete;
-    
+const MapPrototypeDelete = Function.call.bind(Map.prototype.delete);
+export = MapPrototypeDelete;

@@ -1,4 +1,2 @@
-
-    const DataView = globalThis.DataView;
-    export = DataView;
-  
+const DataView = globalThis.DataView;
+export = DataView;

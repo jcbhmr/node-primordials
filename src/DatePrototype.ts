@@ -1,4 +1,2 @@
-
-      const DatePrototype = Date.prototype;
-      export = DatePrototype;
-    
+const DatePrototype = Date.prototype;
+export = DatePrototype;

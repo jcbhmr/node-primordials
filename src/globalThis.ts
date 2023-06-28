@@ -1,4 +1,2 @@
-
-    const globalThis = globalThis.globalThis;
-    export = globalThis;
-  
+const globalThis = globalThis.globalThis;
+export = globalThis;

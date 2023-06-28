@@ -1,4 +1,2 @@
-
-    const Map = globalThis.Map;
-    export = Map;
-  
+const Map = globalThis.Map;
+export = Map;

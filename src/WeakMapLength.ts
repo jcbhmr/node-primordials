@@ -1,4 +1,2 @@
-
-      const WeakMapLength = WeakMap.length;
-      export = WeakMapLength;
-    
+const WeakMapLength = WeakMap.length;
+export = WeakMapLength;

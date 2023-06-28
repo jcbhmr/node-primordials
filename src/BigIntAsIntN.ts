@@ -1,4 +1,2 @@
-
-      const BigIntAsIntN = BigInt.asIntN;
-      export = BigIntAsIntN;
-    
+const BigIntAsIntN = BigInt.asIntN;
+export = BigIntAsIntN;

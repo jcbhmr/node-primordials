@@ -1,4 +1,2 @@
-
-      const FinalizationRegistryLength = FinalizationRegistry.length;
-      export = FinalizationRegistryLength;
-    
+const FinalizationRegistryLength = FinalizationRegistry.length;
+export = FinalizationRegistryLength;

@@ -1,6 +1,2 @@
-
-      const StringPrototypeRepeat = Function.call.bind(
-        String.prototype.repeat
-      );
-      export = StringPrototypeRepeat;
-    
+const StringPrototypeRepeat = Function.call.bind(String.prototype.repeat);
+export = StringPrototypeRepeat;

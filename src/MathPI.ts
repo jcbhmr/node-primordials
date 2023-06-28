@@ -1,4 +1,2 @@
-
-      const MathPI = Math.MathPI;
-      export = MathPI;
-    
+const MathPI = Math.MathPI;
+export = MathPI;

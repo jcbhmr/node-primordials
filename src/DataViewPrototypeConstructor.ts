@@ -1,6 +1,4 @@
-
-      const DataViewPrototypeConstructor = Function.call.bind(
-        DataView.prototype.constructor
-      );
-      export = DataViewPrototypeConstructor;
-    
+const DataViewPrototypeConstructor = Function.call.bind(
+  DataView.prototype.constructor
+);
+export = DataViewPrototypeConstructor;

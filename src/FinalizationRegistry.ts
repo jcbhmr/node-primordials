@@ -1,4 +1,2 @@
-
-    const FinalizationRegistry = globalThis.FinalizationRegistry;
-    export = FinalizationRegistry;
-  
+const FinalizationRegistry = globalThis.FinalizationRegistry;
+export = FinalizationRegistry;

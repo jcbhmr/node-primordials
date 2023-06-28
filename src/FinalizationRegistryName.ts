@@ -1,4 +1,2 @@
-
-      const FinalizationRegistryName = FinalizationRegistry.name;
-      export = FinalizationRegistryName;
-    
+const FinalizationRegistryName = FinalizationRegistry.name;
+export = FinalizationRegistryName;

@@ -1,4 +1,2 @@
-
-      const URIErrorLength = URIError.length;
-      export = URIErrorLength;
-    
+const URIErrorLength = URIError.length;
+export = URIErrorLength;

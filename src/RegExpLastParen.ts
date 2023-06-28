@@ -1,4 +1,2 @@
-
-      const RegExpLastParen = RegExp.lastParen;
-      export = RegExpLastParen;
-    
+const RegExpLastParen = RegExp.lastParen;
+export = RegExpLastParen;

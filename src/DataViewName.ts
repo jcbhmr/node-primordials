@@ -1,4 +1,2 @@
-
-      const DataViewName = DataView.name;
-      export = DataViewName;
-    
+const DataViewName = DataView.name;
+export = DataViewName;

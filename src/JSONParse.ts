@@ -1,4 +1,2 @@
-
-      const JSONParse = JSON.JSONParse;
-      export = JSONParse;
-    
+const JSONParse = JSON.JSONParse;
+export = JSONParse;

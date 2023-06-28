@@ -1,4 +1,2 @@
-
-      const WeakRefName = WeakRef.name;
-      export = WeakRefName;
-    
+const WeakRefName = WeakRef.name;
+export = WeakRefName;

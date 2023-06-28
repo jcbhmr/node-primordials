@@ -1,4 +1,2 @@
-
-      const NumberParseFloat = Number.parseFloat;
-      export = NumberParseFloat;
-    
+const NumberParseFloat = Number.parseFloat;
+export = NumberParseFloat;

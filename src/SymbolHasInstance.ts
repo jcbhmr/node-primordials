@@ -1,4 +1,2 @@
-
-      const SymbolHasInstance = Symbol.hasInstance;
-      export = SymbolHasInstance;
-    
+const SymbolHasInstance = Symbol.hasInstance;
+export = SymbolHasInstance;

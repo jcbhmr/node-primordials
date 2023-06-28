@@ -1,4 +1,2 @@
-
-    const ArrayBuffer = globalThis.ArrayBuffer;
-    export = ArrayBuffer;
-  
+const ArrayBuffer = globalThis.ArrayBuffer;
+export = ArrayBuffer;

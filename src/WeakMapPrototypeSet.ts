@@ -1,6 +1,2 @@
-
-      const WeakMapPrototypeSet = Function.call.bind(
-        WeakMap.prototype.set
-      );
-      export = WeakMapPrototypeSet;
-    
+const WeakMapPrototypeSet = Function.call.bind(WeakMap.prototype.set);
+export = WeakMapPrototypeSet;

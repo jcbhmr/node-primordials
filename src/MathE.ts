@@ -1,4 +1,2 @@
-
-      const MathE = Math.MathE;
-      export = MathE;
-    
+const MathE = Math.MathE;
+export = MathE;

@@ -1,4 +1,2 @@
-
-      const ObjectName = Object.name;
-      export = ObjectName;
-    
+const ObjectName = Object.name;
+export = ObjectName;

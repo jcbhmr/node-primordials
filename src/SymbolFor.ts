@@ -1,4 +1,2 @@
-
-      const SymbolFor = Symbol.for;
-      export = SymbolFor;
-    
+const SymbolFor = Symbol.for;
+export = SymbolFor;

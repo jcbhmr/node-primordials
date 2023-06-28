@@ -1,4 +1,2 @@
-
-      const RegExp$_ = RegExp.$_;
-      export = RegExp$_;
-    
+const RegExp$_ = RegExp.$_;
+export = RegExp$_;

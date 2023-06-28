@@ -1,4 +1,2 @@
-
-      const SymbolReplace = Symbol.replace;
-      export = SymbolReplace;
-    
+const SymbolReplace = Symbol.replace;
+export = SymbolReplace;

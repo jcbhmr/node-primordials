@@ -1,4 +1,2 @@
-
-      const ObjectGetOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-      export = ObjectGetOwnPropertyDescriptor;
-    
+const ObjectGetOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+export = ObjectGetOwnPropertyDescriptor;

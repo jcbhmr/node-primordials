@@ -1,4 +1,2 @@
-
-      const URIErrorName = URIError.name;
-      export = URIErrorName;
-    
+const URIErrorName = URIError.name;
+export = URIErrorName;

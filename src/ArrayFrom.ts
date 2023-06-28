@@ -1,4 +1,2 @@
-
-      const ArrayFrom = Array.from;
-      export = ArrayFrom;
-    
+const ArrayFrom = Array.from;
+export = ArrayFrom;

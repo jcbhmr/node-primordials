@@ -1,4 +1,2 @@
-
-      const ReflectGetOwnPropertyDescriptor = Reflect.ReflectGetOwnPropertyDescriptor;
-      export = ReflectGetOwnPropertyDescriptor;
-    
+const ReflectGetOwnPropertyDescriptor = Reflect.ReflectGetOwnPropertyDescriptor;
+export = ReflectGetOwnPropertyDescriptor;

@@ -1,4 +1,2 @@
-
-      const MathSin = Math.MathSin;
-      export = MathSin;
-    
+const MathSin = Math.MathSin;
+export = MathSin;

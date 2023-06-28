@@ -1,6 +1,2 @@
-
-      const ArrayPrototypeSplice = Function.call.bind(
-        Array.prototype.splice
-      );
-      export = ArrayPrototypeSplice;
-    
+const ArrayPrototypeSplice = Function.call.bind(Array.prototype.splice);
+export = ArrayPrototypeSplice;

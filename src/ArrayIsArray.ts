@@ -1,4 +1,2 @@
-
-      const ArrayIsArray = Array.isArray;
-      export = ArrayIsArray;
-    
+const ArrayIsArray = Array.isArray;
+export = ArrayIsArray;

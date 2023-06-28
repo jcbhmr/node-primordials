@@ -1,6 +1,4 @@
-
-      const ArrayPrototypeFindLastIndex = Function.call.bind(
-        Array.prototype.findLastIndex
-      );
-      export = ArrayPrototypeFindLastIndex;
-    
+const ArrayPrototypeFindLastIndex = Function.call.bind(
+  Array.prototype.findLastIndex
+);
+export = ArrayPrototypeFindLastIndex;

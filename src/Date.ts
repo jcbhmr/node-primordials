@@ -1,4 +1,2 @@
-
-    const Date = globalThis.Date;
-    export = Date;
-  
+const Date = globalThis.Date;
+export = Date;

@@ -1,4 +1,2 @@
-
-      const ArrayBufferIsView = ArrayBuffer.isView;
-      export = ArrayBufferIsView;
-    
+const ArrayBufferIsView = ArrayBuffer.isView;
+export = ArrayBufferIsView;

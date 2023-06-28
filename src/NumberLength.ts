@@ -1,4 +1,2 @@
-
-      const NumberLength = Number.length;
-      export = NumberLength;
-    
+const NumberLength = Number.length;
+export = NumberLength;

@@ -1,4 +1,2 @@
-
-      const SymbolIsConcatSpreadable = Symbol.isConcatSpreadable;
-      export = SymbolIsConcatSpreadable;
-    
+const SymbolIsConcatSpreadable = Symbol.isConcatSpreadable;
+export = SymbolIsConcatSpreadable;

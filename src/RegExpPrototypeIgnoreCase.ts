@@ -1,6 +1,4 @@
-
-      const RegExpPrototypeIgnoreCase = Function.call.bind(
-        RegExp.prototype.ignoreCase
-      );
-      export = RegExpPrototypeIgnoreCase;
-    
+const RegExpPrototypeIgnoreCase = Function.call.bind(
+  RegExp.prototype.ignoreCase
+);
+export = RegExpPrototypeIgnoreCase;

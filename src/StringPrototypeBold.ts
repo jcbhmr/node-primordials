@@ -1,6 +1,2 @@
-
-      const StringPrototypeBold = Function.call.bind(
-        String.prototype.bold
-      );
-      export = StringPrototypeBold;
-    
+const StringPrototypeBold = Function.call.bind(String.prototype.bold);
+export = StringPrototypeBold;

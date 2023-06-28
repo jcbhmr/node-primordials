@@ -1,4 +1,2 @@
-
-      const MathAsinh = Math.MathAsinh;
-      export = MathAsinh;
-    
+const MathAsinh = Math.MathAsinh;
+export = MathAsinh;

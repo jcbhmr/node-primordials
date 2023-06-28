@@ -1,6 +1,2 @@
-
-      const RegExpPrototypeCompile = Function.call.bind(
-        RegExp.prototype.compile
-      );
-      export = RegExpPrototypeCompile;
-    
+const RegExpPrototypeCompile = Function.call.bind(RegExp.prototype.compile);
+export = RegExpPrototypeCompile;

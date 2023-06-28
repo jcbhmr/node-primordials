@@ -1,6 +1,4 @@
-
-      const DatePrototypeToLocaleDateString = Function.call.bind(
-        Date.prototype.toLocaleDateString
-      );
-      export = DatePrototypeToLocaleDateString;
-    
+const DatePrototypeToLocaleDateString = Function.call.bind(
+  Date.prototype.toLocaleDateString
+);
+export = DatePrototypeToLocaleDateString;

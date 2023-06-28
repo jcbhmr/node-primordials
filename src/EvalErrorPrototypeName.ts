@@ -1,6 +1,2 @@
-
-      const EvalErrorPrototypeName = Function.call.bind(
-        EvalError.prototype.name
-      );
-      export = EvalErrorPrototypeName;
-    
+const EvalErrorPrototypeName = Function.call.bind(EvalError.prototype.name);
+export = EvalErrorPrototypeName;

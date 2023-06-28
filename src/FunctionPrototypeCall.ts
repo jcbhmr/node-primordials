@@ -1,6 +1,2 @@
-
-      const FunctionPrototypeCall = Function.call.bind(
-        Function.prototype.call
-      );
-      export = FunctionPrototypeCall;
-    
+const FunctionPrototypeCall = Function.call.bind(Function.prototype.call);
+export = FunctionPrototypeCall;

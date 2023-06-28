@@ -1,4 +1,2 @@
-
-      const StringRaw = String.raw;
-      export = StringRaw;
-    
+const StringRaw = String.raw;
+export = StringRaw;

@@ -1,4 +1,2 @@
-
-      const ReflectGet = Reflect.ReflectGet;
-      export = ReflectGet;
-    
+const ReflectGet = Reflect.ReflectGet;
+export = ReflectGet;

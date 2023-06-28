@@ -1,6 +1,2 @@
-
-      const RegExpPrototypeFlags = Function.call.bind(
-        RegExp.prototype.flags
-      );
-      export = RegExpPrototypeFlags;
-    
+const RegExpPrototypeFlags = Function.call.bind(RegExp.prototype.flags);
+export = RegExpPrototypeFlags;

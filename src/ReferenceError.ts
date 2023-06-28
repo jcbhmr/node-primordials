@@ -1,4 +1,2 @@
-
-    const ReferenceError = globalThis.ReferenceError;
-    export = ReferenceError;
-  
+const ReferenceError = globalThis.ReferenceError;
+export = ReferenceError;

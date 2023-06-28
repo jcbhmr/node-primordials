@@ -1,6 +1,2 @@
-
-      const DatePrototypeGetMonth = Function.call.bind(
-        Date.prototype.getMonth
-      );
-      export = DatePrototypeGetMonth;
-    
+const DatePrototypeGetMonth = Function.call.bind(Date.prototype.getMonth);
+export = DatePrototypeGetMonth;

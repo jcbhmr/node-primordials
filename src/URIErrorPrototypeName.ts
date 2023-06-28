@@ -1,6 +1,2 @@
-
-      const URIErrorPrototypeName = Function.call.bind(
-        URIError.prototype.name
-      );
-      export = URIErrorPrototypeName;
-    
+const URIErrorPrototypeName = Function.call.bind(URIError.prototype.name);
+export = URIErrorPrototypeName;

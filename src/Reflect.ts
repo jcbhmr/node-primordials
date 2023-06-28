@@ -1,4 +1,2 @@
-
-    const Reflect = globalThis.Reflect;
-    export = Reflect;
-  
+const Reflect = globalThis.Reflect;
+export = Reflect;

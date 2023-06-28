@@ -1,6 +1,2 @@
-
-      const MapPrototypeEntries = Function.call.bind(
-        Map.prototype.entries
-      );
-      export = MapPrototypeEntries;
-    
+const MapPrototypeEntries = Function.call.bind(Map.prototype.entries);
+export = MapPrototypeEntries;

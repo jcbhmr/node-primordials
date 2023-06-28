@@ -1,4 +1,2 @@
-
-      const NumberName = Number.name;
-      export = NumberName;
-    
+const NumberName = Number.name;
+export = NumberName;

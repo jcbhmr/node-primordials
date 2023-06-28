@@ -1,4 +1,2 @@
-
-    const TypeError = globalThis.TypeError;
-    export = TypeError;
-  
+const TypeError = globalThis.TypeError;
+export = TypeError;

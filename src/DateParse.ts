@@ -1,4 +1,2 @@
-
-      const DateParse = Date.parse;
-      export = DateParse;
-    
+const DateParse = Date.parse;
+export = DateParse;

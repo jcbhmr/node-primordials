@@ -1,4 +1,2 @@
-
-      const SyntaxErrorName = SyntaxError.name;
-      export = SyntaxErrorName;
-    
+const SyntaxErrorName = SyntaxError.name;
+export = SyntaxErrorName;

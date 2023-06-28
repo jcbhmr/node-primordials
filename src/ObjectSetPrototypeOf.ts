@@ -1,4 +1,2 @@
-
-      const ObjectSetPrototypeOf = Object.setPrototypeOf;
-      export = ObjectSetPrototypeOf;
-    
+const ObjectSetPrototypeOf = Object.setPrototypeOf;
+export = ObjectSetPrototypeOf;

@@ -1,4 +1,2 @@
-
-      const ArrayLength = Array.length;
-      export = ArrayLength;
-    
+const ArrayLength = Array.length;
+export = ArrayLength;

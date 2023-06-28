@@ -1,4 +1,2 @@
-
-      const ObjectCreate = Object.create;
-      export = ObjectCreate;
-    
+const ObjectCreate = Object.create;
+export = ObjectCreate;

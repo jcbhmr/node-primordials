@@ -1,4 +1,2 @@
-
-      const MathCeil = Math.MathCeil;
-      export = MathCeil;
-    
+const MathCeil = Math.MathCeil;
+export = MathCeil;

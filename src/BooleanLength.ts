@@ -1,4 +1,2 @@
-
-      const BooleanLength = Boolean.length;
-      export = BooleanLength;
-    
+const BooleanLength = Boolean.length;
+export = BooleanLength;

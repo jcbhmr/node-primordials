@@ -1,4 +1,2 @@
-
-    const Number = globalThis.Number;
-    export = Number;
-  
+const Number = globalThis.Number;
+export = Number;

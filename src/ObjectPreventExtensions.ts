@@ -1,4 +1,2 @@
-
-      const ObjectPreventExtensions = Object.preventExtensions;
-      export = ObjectPreventExtensions;
-    
+const ObjectPreventExtensions = Object.preventExtensions;
+export = ObjectPreventExtensions;

@@ -1,4 +1,2 @@
-
-      const Int8ArrayPrototype = Int8Array.prototype;
-      export = Int8ArrayPrototype;
-    
+const Int8ArrayPrototype = Int8Array.prototype;
+export = Int8ArrayPrototype;

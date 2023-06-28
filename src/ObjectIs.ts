@@ -1,4 +1,2 @@
-
-      const ObjectIs = Object.is;
-      export = ObjectIs;
-    
+const ObjectIs = Object.is;
+export = ObjectIs;

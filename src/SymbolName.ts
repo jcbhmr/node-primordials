@@ -1,4 +1,2 @@
-
-      const SymbolName = Symbol.name;
-      export = SymbolName;
-    
+const SymbolName = Symbol.name;
+export = SymbolName;

@@ -1,4 +1,2 @@
-
-      const ObjectIsFrozen = Object.isFrozen;
-      export = ObjectIsFrozen;
-    
+const ObjectIsFrozen = Object.isFrozen;
+export = ObjectIsFrozen;

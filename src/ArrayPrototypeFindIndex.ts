@@ -1,6 +1,2 @@
-
-      const ArrayPrototypeFindIndex = Function.call.bind(
-        Array.prototype.findIndex
-      );
-      export = ArrayPrototypeFindIndex;
-    
+const ArrayPrototypeFindIndex = Function.call.bind(Array.prototype.findIndex);
+export = ArrayPrototypeFindIndex;

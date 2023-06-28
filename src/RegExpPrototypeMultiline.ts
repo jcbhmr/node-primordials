@@ -1,6 +1,2 @@
-
-      const RegExpPrototypeMultiline = Function.call.bind(
-        RegExp.prototype.multiline
-      );
-      export = RegExpPrototypeMultiline;
-    
+const RegExpPrototypeMultiline = Function.call.bind(RegExp.prototype.multiline);
+export = RegExpPrototypeMultiline;

@@ -1,6 +1,2 @@
-
-      const StringPrototypeSubstr = Function.call.bind(
-        String.prototype.substr
-      );
-      export = StringPrototypeSubstr;
-    
+const StringPrototypeSubstr = Function.call.bind(String.prototype.substr);
+export = StringPrototypeSubstr;

@@ -1,4 +1,2 @@
-
-      const StringPrototype = String.prototype;
-      export = StringPrototype;
-    
+const StringPrototype = String.prototype;
+export = StringPrototype;

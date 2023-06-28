@@ -1,4 +1,2 @@
-
-      const BigUint64ArrayLength = BigUint64Array.length;
-      export = BigUint64ArrayLength;
-    
+const BigUint64ArrayLength = BigUint64Array.length;
+export = BigUint64ArrayLength;

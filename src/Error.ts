@@ -1,4 +1,2 @@
-
-    const Error = globalThis.Error;
-    export = Error;
-  
+const Error = globalThis.Error;
+export = Error;

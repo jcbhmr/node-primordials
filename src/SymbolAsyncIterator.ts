@@ -1,4 +1,2 @@
-
-      const SymbolAsyncIterator = Symbol.asyncIterator;
-      export = SymbolAsyncIterator;
-    
+const SymbolAsyncIterator = Symbol.asyncIterator;
+export = SymbolAsyncIterator;

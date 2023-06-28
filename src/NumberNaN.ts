@@ -1,4 +1,2 @@
-
-      const NumberNaN = Number.NaN;
-      export = NumberNaN;
-    
+const NumberNaN = Number.NaN;
+export = NumberNaN;

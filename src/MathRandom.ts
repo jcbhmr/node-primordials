@@ -1,4 +1,2 @@
-
-      const MathRandom = Math.MathRandom;
-      export = MathRandom;
-    
+const MathRandom = Math.MathRandom;
+export = MathRandom;

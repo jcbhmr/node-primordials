@@ -1,6 +1,2 @@
-
-      const SetPrototypeValues = Function.call.bind(
-        Set.prototype.values
-      );
-      export = SetPrototypeValues;
-    
+const SetPrototypeValues = Function.call.bind(Set.prototype.values);
+export = SetPrototypeValues;

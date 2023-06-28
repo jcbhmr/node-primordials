@@ -1,4 +1,2 @@
-
-      const ObjectGetPrototypeOf = Object.getPrototypeOf;
-      export = ObjectGetPrototypeOf;
-    
+const ObjectGetPrototypeOf = Object.getPrototypeOf;
+export = ObjectGetPrototypeOf;

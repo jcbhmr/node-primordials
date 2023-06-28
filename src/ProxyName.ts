@@ -1,4 +1,2 @@
-
-      const ProxyName = Proxy.ProxyName;
-      export = ProxyName;
-    
+const ProxyName = Proxy.ProxyName;
+export = ProxyName;

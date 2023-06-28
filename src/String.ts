@@ -1,4 +1,2 @@
-
-    const String = globalThis.String;
-    export = String;
-  
+const String = globalThis.String;
+export = String;

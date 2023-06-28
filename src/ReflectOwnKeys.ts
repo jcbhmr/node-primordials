@@ -1,4 +1,2 @@
-
-      const ReflectOwnKeys = Reflect.ReflectOwnKeys;
-      export = ReflectOwnKeys;
-    
+const ReflectOwnKeys = Reflect.ReflectOwnKeys;
+export = ReflectOwnKeys;

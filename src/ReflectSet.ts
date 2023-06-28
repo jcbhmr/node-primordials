@@ -1,4 +1,2 @@
-
-      const ReflectSet = Reflect.ReflectSet;
-      export = ReflectSet;
-    
+const ReflectSet = Reflect.ReflectSet;
+export = ReflectSet;

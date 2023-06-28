@@ -1,6 +1,4 @@
-
-      const StringPrototypeToLowerCase = Function.call.bind(
-        String.prototype.toLowerCase
-      );
-      export = StringPrototypeToLowerCase;
-    
+const StringPrototypeToLowerCase = Function.call.bind(
+  String.prototype.toLowerCase
+);
+export = StringPrototypeToLowerCase;

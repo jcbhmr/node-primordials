@@ -1,4 +1,2 @@
-
-      const BigUint64ArrayPrototype = BigUint64Array.prototype;
-      export = BigUint64ArrayPrototype;
-    
+const BigUint64ArrayPrototype = BigUint64Array.prototype;
+export = BigUint64ArrayPrototype;

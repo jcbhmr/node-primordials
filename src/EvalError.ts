@@ -1,4 +1,2 @@
-
-    const EvalError = globalThis.EvalError;
-    export = EvalError;
-  
+const EvalError = globalThis.EvalError;
+export = EvalError;

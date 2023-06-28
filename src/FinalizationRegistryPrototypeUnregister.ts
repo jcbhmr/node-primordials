@@ -1,6 +1,4 @@
-
-      const FinalizationRegistryPrototypeUnregister = Function.call.bind(
-        FinalizationRegistry.prototype.unregister
-      );
-      export = FinalizationRegistryPrototypeUnregister;
-    
+const FinalizationRegistryPrototypeUnregister = Function.call.bind(
+  FinalizationRegistry.prototype.unregister
+);
+export = FinalizationRegistryPrototypeUnregister;

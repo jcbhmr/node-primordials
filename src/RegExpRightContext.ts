@@ -1,4 +1,2 @@
-
-      const RegExpRightContext = RegExp.rightContext;
-      export = RegExpRightContext;
-    
+const RegExpRightContext = RegExp.rightContext;
+export = RegExpRightContext;

@@ -1,4 +1,2 @@
-
-      const SymbolToPrimitive = Symbol.toPrimitive;
-      export = SymbolToPrimitive;
-    
+const SymbolToPrimitive = Symbol.toPrimitive;
+export = SymbolToPrimitive;

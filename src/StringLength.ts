@@ -1,4 +1,2 @@
-
-      const StringLength = String.length;
-      export = StringLength;
-    
+const StringLength = String.length;
+export = StringLength;

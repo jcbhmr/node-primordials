@@ -1,4 +1,2 @@
-
-      const ObjectGetOwnPropertySymbols = Object.getOwnPropertySymbols;
-      export = ObjectGetOwnPropertySymbols;
-    
+const ObjectGetOwnPropertySymbols = Object.getOwnPropertySymbols;
+export = ObjectGetOwnPropertySymbols;

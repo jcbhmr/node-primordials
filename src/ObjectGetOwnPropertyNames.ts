@@ -1,4 +1,2 @@
-
-      const ObjectGetOwnPropertyNames = Object.getOwnPropertyNames;
-      export = ObjectGetOwnPropertyNames;
-    
+const ObjectGetOwnPropertyNames = Object.getOwnPropertyNames;
+export = ObjectGetOwnPropertyNames;

@@ -1,4 +1,2 @@
-
-      const WeakSetPrototype = WeakSet.prototype;
-      export = WeakSetPrototype;
-    
+const WeakSetPrototype = WeakSet.prototype;
+export = WeakSetPrototype;

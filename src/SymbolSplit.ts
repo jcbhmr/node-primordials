@@ -1,4 +1,2 @@
-
-      const SymbolSplit = Symbol.split;
-      export = SymbolSplit;
-    
+const SymbolSplit = Symbol.split;
+export = SymbolSplit;

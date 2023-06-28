@@ -1,4 +1,2 @@
-
-    const unescape = globalThis.unescape;
-    export = unescape;
-  
+const unescape = globalThis.unescape;
+export = unescape;

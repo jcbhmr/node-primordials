@@ -1,4 +1,2 @@
-
-      const WeakMapName = WeakMap.name;
-      export = WeakMapName;
-    
+const WeakMapName = WeakMap.name;
+export = WeakMapName;

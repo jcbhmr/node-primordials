@@ -1,4 +1,2 @@
-
-    const encodeURIComponent = globalThis.encodeURIComponent;
-    export = encodeURIComponent;
-  
+const encodeURIComponent = globalThis.encodeURIComponent;
+export = encodeURIComponent;

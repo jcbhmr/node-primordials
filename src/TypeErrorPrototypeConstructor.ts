@@ -1,6 +1,4 @@
-
-      const TypeErrorPrototypeConstructor = Function.call.bind(
-        TypeError.prototype.constructor
-      );
-      export = TypeErrorPrototypeConstructor;
-    
+const TypeErrorPrototypeConstructor = Function.call.bind(
+  TypeError.prototype.constructor
+);
+export = TypeErrorPrototypeConstructor;

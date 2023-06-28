@@ -1,6 +1,2 @@
-
-      const WeakSetPrototypeDelete = Function.call.bind(
-        WeakSet.prototype.delete
-      );
-      export = WeakSetPrototypeDelete;
-    
+const WeakSetPrototypeDelete = Function.call.bind(WeakSet.prototype.delete);
+export = WeakSetPrototypeDelete;

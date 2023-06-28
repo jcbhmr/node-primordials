@@ -1,4 +1,2 @@
-
-      const TypeErrorLength = TypeError.length;
-      export = TypeErrorLength;
-    
+const TypeErrorLength = TypeError.length;
+export = TypeErrorLength;

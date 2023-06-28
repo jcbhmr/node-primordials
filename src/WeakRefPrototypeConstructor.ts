@@ -1,6 +1,4 @@
-
-      const WeakRefPrototypeConstructor = Function.call.bind(
-        WeakRef.prototype.constructor
-      );
-      export = WeakRefPrototypeConstructor;
-    
+const WeakRefPrototypeConstructor = Function.call.bind(
+  WeakRef.prototype.constructor
+);
+export = WeakRefPrototypeConstructor;

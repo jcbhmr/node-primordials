@@ -1,4 +1,2 @@
-
-      const MathAsin = Math.MathAsin;
-      export = MathAsin;
-    
+const MathAsin = Math.MathAsin;
+export = MathAsin;

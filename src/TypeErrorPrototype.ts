@@ -1,4 +1,2 @@
-
-      const TypeErrorPrototype = TypeError.prototype;
-      export = TypeErrorPrototype;
-    
+const TypeErrorPrototype = TypeError.prototype;
+export = TypeErrorPrototype;

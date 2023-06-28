@@ -1,4 +1,2 @@
-
-    const Set = globalThis.Set;
-    export = Set;
-  
+const Set = globalThis.Set;
+export = Set;

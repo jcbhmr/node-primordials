@@ -1,4 +1,2 @@
-
-      const NumberIsInteger = Number.isInteger;
-      export = NumberIsInteger;
-    
+const NumberIsInteger = Number.isInteger;
+export = NumberIsInteger;

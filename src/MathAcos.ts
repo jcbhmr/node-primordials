@@ -1,4 +1,2 @@
-
-      const MathAcos = Math.MathAcos;
-      export = MathAcos;
-    
+const MathAcos = Math.MathAcos;
+export = MathAcos;

@@ -1,6 +1,2 @@
-
-      const ObjectPrototypeToString = Function.call.bind(
-        Object.prototype.toString
-      );
-      export = ObjectPrototypeToString;
-    
+const ObjectPrototypeToString = Function.call.bind(Object.prototype.toString);
+export = ObjectPrototypeToString;

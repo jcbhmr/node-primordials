@@ -1,4 +1,2 @@
-
-      const JSONStringify = JSON.JSONStringify;
-      export = JSONStringify;
-    
+const JSONStringify = JSON.JSONStringify;
+export = JSONStringify;

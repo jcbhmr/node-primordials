@@ -1,4 +1,2 @@
-
-      const DateUTC = Date.UTC;
-      export = DateUTC;
-    
+const DateUTC = Date.UTC;
+export = DateUTC;

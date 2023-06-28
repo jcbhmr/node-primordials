@@ -1,4 +1,2 @@
-
-      const BigIntPrototype = BigInt.prototype;
-      export = BigIntPrototype;
-    
+const BigIntPrototype = BigInt.prototype;
+export = BigIntPrototype;

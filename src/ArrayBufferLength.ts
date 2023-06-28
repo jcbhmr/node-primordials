@@ -1,4 +1,2 @@
-
-      const ArrayBufferLength = ArrayBuffer.length;
-      export = ArrayBufferLength;
-    
+const ArrayBufferLength = ArrayBuffer.length;
+export = ArrayBufferLength;

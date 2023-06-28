@@ -1,4 +1,2 @@
-
-      const AggregateErrorLength = AggregateError.length;
-      export = AggregateErrorLength;
-    
+const AggregateErrorLength = AggregateError.length;
+export = AggregateErrorLength;

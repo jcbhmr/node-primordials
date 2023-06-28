@@ -1,4 +1,2 @@
-
-      const EvalErrorPrototype = EvalError.prototype;
-      export = EvalErrorPrototype;
-    
+const EvalErrorPrototype = EvalError.prototype;
+export = EvalErrorPrototype;

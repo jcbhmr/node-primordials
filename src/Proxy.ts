@@ -1,4 +1,2 @@
-
-    const Proxy = globalThis.Proxy;
-    export = Proxy;
-  
+const Proxy = globalThis.Proxy;
+export = Proxy;

@@ -1,4 +1,2 @@
-
-      const MapLength = Map.length;
-      export = MapLength;
-    
+const MapLength = Map.length;
+export = MapLength;

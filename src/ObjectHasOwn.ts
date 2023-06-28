@@ -1,4 +1,2 @@
-
-      const ObjectHasOwn = Object.hasOwn;
-      export = ObjectHasOwn;
-    
+const ObjectHasOwn = Object.hasOwn;
+export = ObjectHasOwn;

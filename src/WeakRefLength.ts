@@ -1,4 +1,2 @@
-
-      const WeakRefLength = WeakRef.length;
-      export = WeakRefLength;
-    
+const WeakRefLength = WeakRef.length;
+export = WeakRefLength;

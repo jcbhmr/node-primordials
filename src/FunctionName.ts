@@ -1,4 +1,2 @@
-
-      const FunctionName = Function.name;
-      export = FunctionName;
-    
+const FunctionName = Function.name;
+export = FunctionName;

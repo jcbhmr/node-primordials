@@ -1,4 +1,2 @@
-
-      const Uint16ArrayPrototype = Uint16Array.prototype;
-      export = Uint16ArrayPrototype;
-    
+const Uint16ArrayPrototype = Uint16Array.prototype;
+export = Uint16ArrayPrototype;

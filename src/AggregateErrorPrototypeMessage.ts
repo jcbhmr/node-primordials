@@ -1,6 +1,4 @@
-
-      const AggregateErrorPrototypeMessage = Function.call.bind(
-        AggregateError.prototype.message
-      );
-      export = AggregateErrorPrototypeMessage;
-    
+const AggregateErrorPrototypeMessage = Function.call.bind(
+  AggregateError.prototype.message
+);
+export = AggregateErrorPrototypeMessage;

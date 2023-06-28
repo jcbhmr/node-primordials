@@ -1,4 +1,2 @@
-
-      const ObjectIsExtensible = Object.isExtensible;
-      export = ObjectIsExtensible;
-    
+const ObjectIsExtensible = Object.isExtensible;
+export = ObjectIsExtensible;

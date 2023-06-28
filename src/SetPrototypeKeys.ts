@@ -1,6 +1,2 @@
-
-      const SetPrototypeKeys = Function.call.bind(
-        Set.prototype.keys
-      );
-      export = SetPrototypeKeys;
-    
+const SetPrototypeKeys = Function.call.bind(Set.prototype.keys);
+export = SetPrototypeKeys;

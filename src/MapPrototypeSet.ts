@@ -1,6 +1,2 @@
-
-      const MapPrototypeSet = Function.call.bind(
-        Map.prototype.set
-      );
-      export = MapPrototypeSet;
-    
+const MapPrototypeSet = Function.call.bind(Map.prototype.set);
+export = MapPrototypeSet;

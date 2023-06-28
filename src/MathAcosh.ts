@@ -1,4 +1,2 @@
-
-      const MathAcosh = Math.MathAcosh;
-      export = MathAcosh;
-    
+const MathAcosh = Math.MathAcosh;
+export = MathAcosh;

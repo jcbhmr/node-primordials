@@ -1,4 +1,2 @@
-
-    const WeakMap = globalThis.WeakMap;
-    export = WeakMap;
-  
+const WeakMap = globalThis.WeakMap;
+export = WeakMap;

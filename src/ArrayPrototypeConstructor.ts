@@ -1,6 +1,4 @@
-
-      const ArrayPrototypeConstructor = Function.call.bind(
-        Array.prototype.constructor
-      );
-      export = ArrayPrototypeConstructor;
-    
+const ArrayPrototypeConstructor = Function.call.bind(
+  Array.prototype.constructor
+);
+export = ArrayPrototypeConstructor;

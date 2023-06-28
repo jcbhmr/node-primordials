@@ -1,4 +1,2 @@
-
-    const escape = globalThis.escape;
-    export = escape;
-  
+const escape = globalThis.escape;
+export = escape;

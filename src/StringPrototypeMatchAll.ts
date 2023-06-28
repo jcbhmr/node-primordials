@@ -1,6 +1,2 @@
-
-      const StringPrototypeMatchAll = Function.call.bind(
-        String.prototype.matchAll
-      );
-      export = StringPrototypeMatchAll;
-    
+const StringPrototypeMatchAll = Function.call.bind(String.prototype.matchAll);
+export = StringPrototypeMatchAll;

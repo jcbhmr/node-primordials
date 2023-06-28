@@ -1,4 +1,2 @@
-
-      const ProxyLength = Proxy.ProxyLength;
-      export = ProxyLength;
-    
+const ProxyLength = Proxy.ProxyLength;
+export = ProxyLength;

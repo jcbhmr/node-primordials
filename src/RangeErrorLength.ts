@@ -1,4 +1,2 @@
-
-      const RangeErrorLength = RangeError.length;
-      export = RangeErrorLength;
-    
+const RangeErrorLength = RangeError.length;
+export = RangeErrorLength;

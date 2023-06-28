@@ -1,6 +1,2 @@
-
-      const SetPrototypeHas = Function.call.bind(
-        Set.prototype.has
-      );
-      export = SetPrototypeHas;
-    
+const SetPrototypeHas = Function.call.bind(Set.prototype.has);
+export = SetPrototypeHas;

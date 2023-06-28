@@ -1,4 +1,2 @@
-
-      const MathCbrt = Math.MathCbrt;
-      export = MathCbrt;
-    
+const MathCbrt = Math.MathCbrt;
+export = MathCbrt;

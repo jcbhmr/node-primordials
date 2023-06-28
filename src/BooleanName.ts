@@ -1,4 +1,2 @@
-
-      const BooleanName = Boolean.name;
-      export = BooleanName;
-    
+const BooleanName = Boolean.name;
+export = BooleanName;

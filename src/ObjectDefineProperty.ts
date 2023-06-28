@@ -1,4 +1,2 @@
-
-      const ObjectDefineProperty = Object.defineProperty;
-      export = ObjectDefineProperty;
-    
+const ObjectDefineProperty = Object.defineProperty;
+export = ObjectDefineProperty;

@@ -1,6 +1,2 @@
-
-      const DatePrototypeSetUTCDate = Function.call.bind(
-        Date.prototype.setUTCDate
-      );
-      export = DatePrototypeSetUTCDate;
-    
+const DatePrototypeSetUTCDate = Function.call.bind(Date.prototype.setUTCDate);
+export = DatePrototypeSetUTCDate;
