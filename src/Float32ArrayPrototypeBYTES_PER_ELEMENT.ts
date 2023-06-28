@@ -1,3 +1,0 @@
-// TODO: Float32ArrayPrototypeBYTES_PER_ELEMENT
-const Float32ArrayPrototypeBYTES_PER_ELEMENT = undefined;
-export default Float32ArrayPrototypeBYTES_PER_ELEMENT;

@@ -1,3 +1,0 @@
-// TODO: TypedArrayPrototypeGetSymbolToStringTag
-const TypedArrayPrototypeGetSymbolToStringTag = undefined;
-export default TypedArrayPrototypeGetSymbolToStringTag;

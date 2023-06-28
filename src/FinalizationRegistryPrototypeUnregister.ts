@@ -1,3 +1,0 @@
-// TODO: FinalizationRegistryPrototypeUnregister
-const FinalizationRegistryPrototypeUnregister = undefined;
-export default FinalizationRegistryPrototypeUnregister;

@@ -1,3 +1,0 @@
-// TODO: FinalizationRegistryPrototypeSymbolToStringTag
-const FinalizationRegistryPrototypeSymbolToStringTag = undefined;
-export default FinalizationRegistryPrototypeSymbolToStringTag;

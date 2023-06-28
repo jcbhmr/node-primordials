@@ -1,3 +1,0 @@
-// TODO: FinalizationRegistryPrototypeConstructor
-const FinalizationRegistryPrototypeConstructor = undefined;
-export default FinalizationRegistryPrototypeConstructor;
