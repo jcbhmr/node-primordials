@@ -1,0 +1,3 @@
+// TODO: BigUint64ArrayPrototypeBYTES_PER_ELEMENT
+const BigUint64ArrayPrototypeBYTES_PER_ELEMENT = undefined;
+export default BigUint64ArrayPrototypeBYTES_PER_ELEMENT;
