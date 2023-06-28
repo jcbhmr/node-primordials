@@ -3,6 +3,9 @@
     "target": "ESNext",
     "module": "CommonJS",
     "moduleResolution": "NodeNext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true
   }

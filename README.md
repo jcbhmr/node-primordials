@@ -68,5 +68,14 @@ You can see a list of what the current internal `primordials` object looks like
 for your current Node.js version by running this:
 
 ```sh
-NODE_NO_WARNINGS=1 node --expose-internals -r internal/test/binding -p 'Reflect.ownKeys(primordials).join("\n")'
+NODE_NO_WARNINGS=1 node --expose-internals -r internal/test/binding -p 'Reflect.ownKeys(primordials).sort().join("\n")'
 ```
+
+This package uses ESM-like syntax in TypeScript files and then compiles down to
+CommonJS. This is because we want to support CommonJS-supporting Node.js
+polyfills. If we used ESM, then this library would not be `require()`-able by
+CommonJS consumers.
+
+Since we compile to CJS, make sure you use **named exports everywhere** since
+those are the most interoperable between ESM and CJS. Default exports get wonky
+and `export =` gets wonky too.
