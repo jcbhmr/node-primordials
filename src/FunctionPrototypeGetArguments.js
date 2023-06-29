@@ -1,4 +1,4 @@
-/** @type {(this: Function) => typeof Function.prototype.arguments} */
+/** @type {(that: Function) => typeof Function.prototype.arguments} */
 const FunctionPrototypeGetArguments = Object.call.bind(
   Object.getOwnPropertyDescriptor(Function.prototype, "arguments").get
 );

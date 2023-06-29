@@ -1,4 +1,4 @@
-/** @type {(this: DataView) => typeof DataView.prototype.byteLength} */
+/** @type {(that: DataView) => typeof DataView.prototype.byteLength} */
 const DataViewPrototypeGetByteLength = Object.call.bind(
   Object.getOwnPropertyDescriptor(DataView.prototype, "byteLength").get
 );

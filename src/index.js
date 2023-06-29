@@ -753,9 +753,9 @@ module.exports = {
   encodeURIComponent: require("./encodeURIComponent.js"),
   escape: require("./escape.js"),
   eval: require("./eval.js"),
-  globalThis: require("./globalThis.js"),
+  globalthat: require("./globalThis.js"),
   hardenRegExp: require("./hardenRegExp.js"),
   makeSafe: require("./makeSafe.js"),
-  uncurryThis: require("./uncurryThis.js"),
+  uncurrythat: require("./uncurryThis.js"),
   unescape: require("./unescape.js"),
 };

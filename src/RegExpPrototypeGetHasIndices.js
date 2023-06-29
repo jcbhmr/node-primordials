@@ -1,4 +1,4 @@
-/** @type {(this: RegExp) => typeof RegExp.prototype.hasIndices} */
+/** @type {(that: RegExp) => typeof RegExp.prototype.hasIndices} */
 const RegExpPrototypeGetHasIndices = Object.call.bind(
   Object.getOwnPropertyDescriptor(RegExp.prototype, "hasIndices").get
 );

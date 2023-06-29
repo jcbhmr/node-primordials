@@ -1,4 +1,4 @@
-/** @type {(this: Date, ...a: Parameters<typeof Date.prototype.getUTCMinutes>) => ReturnType<typeof Date.prototype.getUTCMinutes>} */
+/** @type {(that: Date, ...a: Parameters<typeof Date.prototype.getUTCMinutes>) => ReturnType<typeof Date.prototype.getUTCMinutes>} */
 const DatePrototypeGetUTCMinutes = Object.call.bind(
   Date.prototype.getUTCMinutes
 );

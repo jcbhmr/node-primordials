@@ -1,4 +1,4 @@
-/** @type {(this: RegExp) => typeof RegExp.prototype.sticky} */
+/** @type {(that: RegExp) => typeof RegExp.prototype.sticky} */
 const RegExpPrototypeGetSticky = Object.call.bind(
   Object.getOwnPropertyDescriptor(RegExp.prototype, "sticky").get
 );

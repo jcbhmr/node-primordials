@@ -1,4 +1,9 @@
-/** @type {(this: ArrayBuffer, ...a: Parameters<typeof ArrayBuffer.prototype.constructor>) => ReturnType<typeof ArrayBuffer.prototype.constructor>} */
+/**
+ * @type {(
+ *   that: any,
+ *   ...a: ConstructorParameters<typeof ArrayBuffer>
+ * ) => ArrayBuffer}
+ */
 const ArrayBufferPrototypeConstructor = Object.call.bind(
   ArrayBuffer.prototype.constructor
 );

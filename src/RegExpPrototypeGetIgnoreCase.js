@@ -1,4 +1,4 @@
-/** @type {(this: RegExp) => typeof RegExp.prototype.ignoreCase} */
+/** @type {(that: RegExp) => typeof RegExp.prototype.ignoreCase} */
 const RegExpPrototypeGetIgnoreCase = Object.call.bind(
   Object.getOwnPropertyDescriptor(RegExp.prototype, "ignoreCase").get
 );

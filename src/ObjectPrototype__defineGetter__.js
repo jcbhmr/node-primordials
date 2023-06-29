@@ -1,4 +1,4 @@
-/** @type {(this: Object, ...a: Parameters<typeof Object.prototype.__defineGetter__>) => ReturnType<typeof Object.prototype.__defineGetter__>} */
+/** @type {(that: Object, ...a: Parameters<typeof Object.prototype.__defineGetter__>) => ReturnType<typeof Object.prototype.__defineGetter__>} */
 const ObjectPrototype__defineGetter__ = Object.call.bind(
   Object.prototype.__defineGetter__
 );

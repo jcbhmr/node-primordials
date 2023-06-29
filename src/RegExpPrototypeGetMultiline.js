@@ -1,4 +1,4 @@
-/** @type {(this: RegExp) => typeof RegExp.prototype.multiline} */
+/** @type {(that: RegExp) => typeof RegExp.prototype.multiline} */
 const RegExpPrototypeGetMultiline = Object.call.bind(
   Object.getOwnPropertyDescriptor(RegExp.prototype, "multiline").get
 );

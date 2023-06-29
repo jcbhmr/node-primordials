@@ -2,11 +2,12 @@
   "compilerOptions": {
     "noEmit": true,
     "allowJs": true,
-    "checkJs": false,
+    "checkJs": true,
     "target": "ESNext",
     "module": "CommonJS",
     "moduleResolution": "NodeNext",
     "lib": ["ESNext", "DOM"],
+    // "strict": true,
     "skipLibCheck": true,
     "isolatedModules": true
   },

@@ -1,4 +1,4 @@
-/** @type {(this: RegExp) => typeof RegExp.prototype.dotAll} */
+/** @type {(that: RegExp) => typeof RegExp.prototype.dotAll} */
 const RegExpPrototypeGetDotAll = Object.call.bind(
   Object.getOwnPropertyDescriptor(RegExp.prototype, "dotAll").get
 );
