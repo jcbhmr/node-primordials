@@ -4,16 +4,16 @@
   "description": "🧊 The native primordials object from Node.js for anywhere",
   "type": "commonjs",
   "exports": {
-    ".": "./src/index.js",
-    "./*.js": "./src/*.js",
+    ".": "./dist/index.js",
+    "./*.js": "./dist/*.js",
     "./internal/*": null
   },
   "scripts": {
-    "build": "node build.mjs",
-    "build:docs": "node build-docs.mjs",
+    "build": "tsc",
+    "build:docs": "typedoc",
     "docs:preview": "serve docs/dist",
-    "lint": "prettier --ignore-path .gitignore -w .",
-    "test": "node --test"
+    "lint": "prettier --ignore-path .gitignore -w . && tsc --noEmit",
+    "test": "tsx --test test/index.test.mts"
   },
   "devDependencies": {
     "@types/node": "^20.3.2",
@@ -21,6 +21,7 @@
     "prettier-plugin-jsdoc": "^0.4.2",
     "prettier-plugin-packagejson": "^2.4.3",
     "serve": "^14.2.0",
-    "typedoc": "^0.24.8"
+    "typedoc": "^0.24.8",
+    "typescript": "^5.1.6"
   }
 }
