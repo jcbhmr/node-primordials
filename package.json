@@ -9,7 +9,8 @@
     "./internal/*": null
   },
   "scripts": {
-    "build:docs": "typedoc",
+    "build": "node build.mjs",
+    "build:docs": "node build-docs.mjs",
     "docs:preview": "serve docs/dist",
     "lint": "prettier --ignore-path .gitignore -w .",
     "test": "node --test"
@@ -21,12 +22,5 @@
     "prettier-plugin-packagejson": "^2.4.3",
     "serve": "^14.2.0",
     "typedoc": "^0.24.8"
-  },
-  "typedocOptions": {
-    "entryPoints": [
-      "./src/*.js"
-    ],
-    "out": "docs/dist",
-    "skipErrorChecking": true
   }
 }

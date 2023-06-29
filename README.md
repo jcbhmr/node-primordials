@@ -68,8 +68,7 @@ You can see a list of what the current internal `primordials` object looks like
 for your current Node.js version by running this:
 
 ```sh
-NODE_NO_WARNINGS=1 node --expose-internals -r internal/test/binding \
-  -p '[`Node.js ${process.version}`].concat(Reflect.ownKeys(primordials).sort()).join("\n")'
+node --expose-internals -r internal/test/binding
 ```
 
 This package uses ESM-like syntax in TypeScript files and then compiles down to

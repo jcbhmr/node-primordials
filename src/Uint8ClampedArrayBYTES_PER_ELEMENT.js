@@ -1,2 +1,0 @@
-const Uint8ClampedArrayBYTES_PER_ELEMENT = Uint8ClampedArray.BYTES_PER_ELEMENT;
-module.exports = Uint8ClampedArrayBYTES_PER_ELEMENT;

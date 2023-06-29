@@ -1,2 +1,0 @@
-const NumberNEGATIVE_INFINITY = Number.NEGATIVE_INFINITY;
-module.exports = NumberNEGATIVE_INFINITY;
