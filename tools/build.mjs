@@ -49,6 +49,24 @@ function getPropExpr(key) {
   }
 }
 
+for (const key of 
+var js = `
+  /**
+   * @template T,U
+   * @param {Array<T|PromiseLike<T>>} promises
+   * @param {(v: T|PromiseLike<T>, k: number) => U|PromiseLike<U>} [mapFn]
+   * @returns {Promise<Awaited<U>>}
+   */
+  const SafePromiseRace = (promises, mapFn) =>
+    // Wrapping on a new Promise is necessary to not expose the SafePromise
+    // prototype to user-land.
+    new Promise((a, b) =>
+      SafePromise.race(arrayToSafePromiseIterable(promises, mapFn)).then(a, b),
+    );
+  module.exports = SafePromiseRace;
+`
+await fsPromises.writeFile(`dist/SafePromise${})
+
 var js = `
   const ObjectDefineProperties = require("./ObjectDefineProperties.js");
   const SymbolMatch = require("./SymbolMatch.js");
@@ -56,25 +74,25 @@ var js = `
   const SymbolReplace = require("./SymbolReplace.js");
   const SymbolSplit = require("./SymbolSplit.js");
   const SymbolSpecies = require("./SymbolSpecies.js");
+  const RegExp = require("./RegExp.js");
+  const RegExpPrototype = require("./RegExpPrototype.js");
 
   const OriginalRegExpPrototypeSymbolMatch = RegExpPrototype[SymbolMatch];
-  const OriginalRegExpPrototypeSymbolMatchAll = RegExp.prototype[SymbolMatchAll];
-  const OriginalRegExpPrototypeSymbolReplace = RegExp.prototype[SymbolReplace];
-  const OriginalRegExpPrototypeSymbolSplit = RegExp.prototype[SymbolSplit];
+  const OriginalRegExpPrototypeSymbolMatchAll = RegExpPrototype[SymbolMatchAll];
+  const OriginalRegExpPrototypeSymbolReplace = RegExpPrototype[SymbolReplace];
+  const OriginalRegExpPrototypeSymbolSplit = RegExpPrototype[SymbolSplit];
 
   class RegExpLikeForStringSplitting {
     #regex;
     constructor() {
       this.#regex = ReflectConstruct(RegExp, arguments);
     }
-
     get lastIndex() {
       return ReflectGet(this.#regex, 'lastIndex');
     }
     set lastIndex(value) {
       ReflectSet(this.#regex, 'lastIndex', value);
     }
-
     exec() {
       return ReflectApply(OriginalRegExpPrototypeExec, this.#regex, arguments);
     }
@@ -173,6 +191,8 @@ var js = `
     return pattern;
   };
 `
+await fsPromises.writeFile("dist/hardenRegExp.js", js);
+console.debug("wrote hardenRegExp.js");
 
 var js = `
   "use strict";
@@ -201,8 +221,6 @@ const primNames = JSON.parse(
     -r internal/test/binding \
     -p 'JSON.stringify(Reflect.ownKeys(primordials).sort())'`
 );
-console.debug("primNames", primNames);
-
 var js = `"use strict";`;
 for (const primName of primNames) {
   const fileName = escapePrimName(primName);
