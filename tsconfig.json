@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
+    "noEmit": true,
+    "allowJs": true,
+    "checkJs": false,
     "target": "ESNext",
     "module": "CommonJS",
     "moduleResolution": "NodeNext",
-    "isolatedModules": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
-    "strict": true
+    "isolatedModules": true
   },
   "include": ["src"]
 }

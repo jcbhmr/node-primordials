@@ -1,0 +1,2 @@
+const NumberPOSITIVE_INFINITY = Number.POSITIVE_INFINITY;
+module.exports = NumberPOSITIVE_INFINITY;
