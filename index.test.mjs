@@ -1,4 +1,5 @@
-import test from "node:test";
+// import test from "node:test";
+import { test } from "vitest";
 import assert from "node:assert";
 import { $ } from "execa";
 
@@ -29,26 +30,26 @@ console.debug("primNames.length", primNames.length);
 
 for (const name of primNames) {
   test(`exports ${name}`, async () => {
-    const index = await import("@nodefill/primordials");
+    const index = await import("./dist/index.js");
     assert(name in index, `missing ${name}`);
   });
 }
 test(`default export is primordials`, async () => {
-  const { default: primordials } = await import("@nodefill/primordials");
-  assert(Object.getPrototypeOf(primordials) == null);
+  const { default: primordials } = await import("./dist/index.js");
+  assert.equal(Object.getPrototypeOf(primordials), null);
   assert(Object.isFrozen(primordials));
 });
 
 for (const name of primNames) {
   test(`file ${name}.js importable`, async () => {
-    await import(`@nodefill/primordials/${escapePrimName(name)}.js`);
+    await import(`./dist/${escapePrimName(name)}.js`);
   });
 }
 
 test(`file polyfill.js importable`, async () => {
-  await import(`@nodefill/primordials/polyfill.js`);
+  await import("./dist/polyfill.js");
 });
 test(`polyfill.js provides globalThis.primordials`, async () => {
-  await import(`@nodefill/primordials/polyfill.js`);
+  await import("./dist/polyfill.js");
   assert(globalThis.primordials);
-})
+});
