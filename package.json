@@ -1,26 +1,43 @@
 {
-  "name": "@jcbhmr/node-primordials",
-  "version": "1.0.3",
-  "description": "desc",
-  "keywords": [],
-  "homepage": "https://jcbhmr.github.io/node-primordials/",
-  "bugs": "https://github.com/jcbhmr/node-primordials/issues",
-  "repository": "github:jcbhmr/node-primordials",
+  "name": "@nodefill/primordials",
+  "version": "2.0.0",
+  "description": "🧊 The native primordials object from Node.js for anywhere",
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "polyfill",
+    "ecmascript",
+    "intrinsics",
+    "hardening",
+    "primordials"
+  ],
+  "homepage": "https://github.com/nodefill/primordials#readme",
+  "bugs": "https://github.com/nodefill/primordials/issues",
+  "repository": "github:nodefill/primordials",
   "license": "MIT",
-  "author": "Jacob Hummer <jcbhmr@outlook.com> (https://jcbhmr.me/)",
+  "contributors": [
+    "Jacob Hummer <jcbhmr@outlook.com> (https://jcbhmr.me/)"
+  ],
   "type": "commonjs",
-  "imports": {
-    "#*": "./lib/*.js"
+  "exports": {
+    ".": "./dist/index.js",
+    "./*.js": "./dist/*.js",
+    "./internal/*": null
   },
-  "exports": "./index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build:docs": "vitepress build docs",
-    "docs:dev": "vitepress dev docs",
-    "start": "node --test --watch",
+    "build": "node build.mjs",
+    "lint": "prettier --ignore-path .gitignore -w .",
+    "pretest": "npm run build",
     "test": "node --test"
   },
   "devDependencies": {
+    "@types/node": "^20.3.2",
     "execa": "^7.1.1",
-    "vitepress": "^1.0.0-beta.2"
+    "prettier": "^2.8.8",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "typescript": "^5.1.6"
   }
 }
