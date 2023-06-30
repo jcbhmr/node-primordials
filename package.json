@@ -38,7 +38,6 @@
     "execa": "^7.1.1",
     "prettier": "^2.8.8",
     "prettier-plugin-packagejson": "^2.4.3",
-    "typescript": "^5.1.6",
-    "vitest": "^0.32.2"
+    "typescript": "^5.1.6"
   }
 }
