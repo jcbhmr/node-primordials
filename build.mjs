@@ -20,14 +20,16 @@ function escapePrimName(primName) {
 
 var js = `
   "use strict";
-  const uncurryThis = Object.bind.bind(Object.call);
+  const { apply, bind, call } = Function.prototype;
+  const uncurryThis = bind.bind(call);
   module.exports = uncurryThis;
 `;
 await fsPromises.writeFile("dist/uncurryThis.js", js);
 
 var js = `
   "use strict";
-  const applyBind = Object.bind.bind(Object.apply);
+  const { apply, bind, call } = Function.prototype;
+  const applyBind = bind.bind(apply);
   module.exports = applyBind;
 `;
 await fsPromises.writeFile("dist/applyBind.js", js);
@@ -80,6 +82,7 @@ async function copyAccessor(dest, prefix, key, { enumerable, get, set }) {
         getOldKey(key).description || `"${getOldKey(key)}"`
       });
       const ${escapePrimName(`${prefix}Set${key}`)} = uncurryThis(set);
+      module.exports = ${escapePrimName(`${prefix}Set${key}`)};
     `;
     await fsPromises.writeFile(
       `dist/${escapePrimName(`${prefix}Set${key}`)}.js`,
@@ -1004,9 +1007,11 @@ await fsPromises.writeFile(`dist/index.js`, js);
 
 var js = `
   "use strict";
-  const primordials_ = require("./primordials.js");
-  /** @global */
-  globalThis.primordials = primordials_;
+  if (typeof primordials === "undefined") {
+    const primordials_ = require("./primordials.js");
+    /** @global */
+    globalThis.primordials = primordials_;
+  }
 `;
 await fsPromises.writeFile(`dist/polyfill.js`, js);
 
@@ -1029,6 +1034,6 @@ try {
   await $({ cwd: "dist" })`npx tsc --noEmit`;
 } catch (error) {
   console.error(error.stderr + error.stdout);
-  // TODO: Fix type errors
+  // TODO: Fix type errors?
   // process.exit(error.exitCode);
 }
