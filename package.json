@@ -1,6 +1,6 @@
 {
   "name": "@nodefill/primordials",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "🧊 The native primordials object from Node.js for anywhere",
   "type": "commonjs",
   "exports": {
@@ -8,10 +8,14 @@
     "./*.js": "./dist/*.js",
     "./internal/*": null
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "node build.mjs",
     "lint": "prettier --ignore-path .gitignore -w .",
-    "test": "node build.mjs && node --test"
+    "pretest": "npm run build",
+    "test": "node --test"
   },
   "devDependencies": {
     "@types/node": "^20.3.2",

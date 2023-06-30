@@ -3,6 +3,8 @@ import fs from "node:fs";
 import fsPromises from "node:fs/promises";
 import { $ } from "execa";
 
+console.debug("process.version", process.version);
+
 await fsPromises.rm("dist", { recursive: true, force: true });
 await fsPromises.mkdir("dist/internal", { recursive: true });
 
@@ -21,6 +23,7 @@ function escapePrimName(primName) {
 var js = `
   "use strict";
   const { apply, bind, call } = Function.prototype;
+  /** @type {<T extends (...args: unknown[]) => unknown>(fn: T) => ((self: ThisParameterType<T>, ...args: Parameters<T>) => ReturnType<T>)} */
   const uncurryThis = bind.bind(call);
   module.exports = uncurryThis;
 `;
@@ -66,6 +69,7 @@ async function copyAccessor(dest, prefix, key, { enumerable, get, set }) {
     const { get } = Object.getOwnPropertyDescriptor(prefix, ${
       getOldKey(key).description || `"${getOldKey(key)}"`
     });
+    // @ts-ignore
     const ${escapePrimName(`${prefix}Get${key}`)} = uncurryThis(get);
     module.exports = ${escapePrimName(`${prefix}Get${key}`)};
   `;
@@ -81,6 +85,7 @@ async function copyAccessor(dest, prefix, key, { enumerable, get, set }) {
       const { set } = Object.getOwnPropertyDescriptor(prefix, ${
         getOldKey(key).description || `"${getOldKey(key)}"`
       });
+      // @ts-ignore
       const ${escapePrimName(`${prefix}Set${key}`)} = uncurryThis(set);
       module.exports = ${escapePrimName(`${prefix}Set${key}`)};
     `;
@@ -187,6 +192,7 @@ async function copyPrototype(src, dest, prefix) {
             : ""
         }
         const src = require("./${escapePrimName(prefix)}.js");
+        // @ts-ignore
         const ${escapePrimName(name)} = ${
         typeof value === "function" ? `uncurryThis(` : ""
       }src[${key.description || `"${key}"`}]${
@@ -402,6 +408,7 @@ var js = `
         this._iterator = factory(iterable);
       }
       next() {
+        // @ts-ignore
         return next(this._iterator);
       }
       [SymbolIterator]() {
@@ -411,6 +418,7 @@ var js = `
     ObjectSetPrototypeOf(SafeIterator.prototype, null);
     ObjectFreeze(SafeIterator.prototype);
     ObjectFreeze(SafeIterator);
+    // @ts-ignore
     return SafeIterator;
   };
   module.exports = createSafeIterator;
@@ -424,6 +432,7 @@ var js = `
   const ArrayIteratorPrototypeNext = require("./ArrayIteratorPrototypeNext.js");
   const SafeArrayIterator = createSafeIterator(
     ArrayPrototypeSymbolIterator,
+    // @ts-ignore
     ArrayIteratorPrototypeNext,
   );
   module.exports = SafeArrayIterator;
@@ -436,6 +445,7 @@ var js = `
   const StringIteratorPrototypeNext = require("./StringIteratorPrototypeNext.js");
   const SafeStringIterator = createSafeIterator(
     StringPrototypeSymbolIterator,
+    // @ts-ignore
     StringIteratorPrototypeNext,
   );
   module.exports = SafeStringIterator;
@@ -454,6 +464,7 @@ var js = `
         ReflectDefineProperty(
           dest,
           key,
+          // @ts-ignore
           { __proto__: null, ...ReflectGetOwnPropertyDescriptor(src, key) });
       }
     });
@@ -476,7 +487,7 @@ var js = `
   const ObjectSetPrototypeOf = require("./ObjectSetPrototypeOf.js");
   const ObjectFreeze = require("./ObjectFreeze.js");
   /**
-   * @type {typeof primordials.makeSafe}
+   * @type {<T extends {new(...a:any[]):object}>(unsafe: T, safe: T) => T}
    */
   const makeSafe = (unsafe, safe) => {
     if (SymbolIterator in unsafe.prototype) {
@@ -495,9 +506,11 @@ var js = `
             next ??= uncurryThis(createIterator(dummy).next);
             const SafeIterator = createSafeIterator(createIterator, next);
             desc.value = function() {
+              // @ts-ignore
               return new SafeIterator(this);
             };
           }
+          // @ts-ignore
           ReflectDefineProperty(safe.prototype, key, { __proto__: null, ...desc });
         }
       });
@@ -533,6 +546,7 @@ var js = `
   const makeSafe = require("./makeSafe.js");
   const SafeWeakMap = makeSafe(
     WeakMap,
+    // @ts-ignore
     class SafeWeakMap extends WeakMap {
       constructor(i) { super(i); } // eslint-disable-line no-useless-constructor
     },
@@ -618,7 +632,7 @@ var js = `
    * rejected). The resolved value cannot be modified from the callback.
    * Prefer using async functions when possible.
    * @param {Promise<any>} thisPromise
-   * @param {() => void) | undefined | null} onFinally The callback to execute
+   * @param {(() => void) | undefined | null} onFinally The callback to execute
    *        when the Promise is settled (fulfilled or rejected).
    * @returns {Promise} A Promise for the completion of the callback.
    */
@@ -636,10 +650,12 @@ await fsPromises.writeFile(`dist/SafePromisePrototypeFinally.js`, js);
 
 var js = `
   "use strict";
-  const AsyncIteratorPrototype =
-    Reflect.getPrototypeOf(
-      Reflect.getPrototypeOf(
-        async function* () {}).prototype);
+  /** @type {AsyncIterator} */
+  // @ts-ignore
+  const AsyncIteratorPrototype = Reflect.getPrototypeOf(
+    // @ts-ignore
+    Reflect.getPrototypeOf(async function* () {}).prototype
+  );
   module.exports = AsyncIteratorPrototype;
 `;
 await fsPromises.writeFile(`dist/AsyncIteratorPrototype.js`, js);
@@ -651,6 +667,7 @@ var js = `
   const SafePromise = require("./SafePromise.js");
   const PromisePrototypeThen = require("../PromisePrototypeThen.js");
   const arrayToSafePromiseIterable = (promises, mapFn) =>
+    // @ts-ignore
     new SafeArrayIterator(
       ArrayPrototypeMap(
         promises,
@@ -684,6 +701,8 @@ await fsPromises.writeFile(`dist/SafePromiseAll.js`, js);
 
 var js = `
   "use strict";
+  const Promise = require("./Promise.js");
+  const PromiseResolve = require("./PromiseResolve.js");
   const ObjectSetPrototypeOf = require("./ObjectSetPrototypeOf.js");
   const ArrayConstructor = require("./Array.js");
   const PromisePrototypeThen = require("./PromisePrototypeThen.js");
@@ -776,6 +795,7 @@ var js = `
    * @returns {Promise<void>}
    */
   const SafePromiseAllSettledReturnVoid = async (promises, mapFn) => {
+    // @ts-ignore
     await SafePromiseAllSettled(promises, mapFn);
   };
   module.exports = SafePromiseAllSettledReturnVoid;
@@ -784,6 +804,7 @@ await fsPromises.writeFile(`dist/SafePromiseAllSettledReturnVoid.js`, js);
 
 var js = `
   "use strict";
+  const Promise = require("./Promise.js");
   const SafePromise = require("./internal/SafePromise.js");
   const arrayToSafePromiseIterable = require("./internal/arrayToSafePromiseIterable.js");
   /**
@@ -804,6 +825,7 @@ await fsPromises.writeFile(`dist/SafePromiseAny.js`, js);
 
 var js = `
   "use strict";
+  const Promise = require("./Promise.js");
   const SafePromise = require("./internal/SafePromise.js");
   const arrayToSafePromiseIterable = require("./internal/arrayToSafePromiseIterable.js");
   /**
@@ -837,10 +859,15 @@ var js = `
   const ObjectSetPrototypeOf = require("../ObjectSetPrototypeOf.js");
   const {
     exec: OriginalRegExpPrototypeExec,
+    // @ts-ignore
     [SymbolMatch]: OriginalRegExpPrototypeSymbolMatch,
+    // @ts-ignore
     [SymbolMatchAll]: OriginalRegExpPrototypeSymbolMatchAll,
+    // @ts-ignore
     [SymbolReplace]: OriginalRegExpPrototypeSymbolReplace,
+    // @ts-ignore
     [SymbolSearch]: OriginalRegExpPrototypeSymbolSearch,
+    // @ts-ignore
     [SymbolSplit]: OriginalRegExpPrototypeSymbolSplit,
   } = RegExpPrototype;
   class RegExpLikeForStringSplitting {
@@ -865,6 +892,38 @@ await fsPromises.writeFile(`dist/internal/RegExpLikeForStringSplitting.js`, js);
 
 var js = `
   "use strict";
+  const ObjectDefineProperties = require("./ObjectDefineProperties.js");
+  const ObjectDefineProperty = require("./ObjectDefineProperty.js");
+  const SymbolMatch = require("./SymbolMatch.js");
+  const SymbolMatchAll = require("./SymbolMatchAll.js");
+  const SymbolReplace = require("./SymbolReplace.js");
+  const SymbolSearch = require("./SymbolSearch.js");
+  const SymbolSplit = require("./SymbolSplit.js");
+  const SymbolSpecies = require("./SymbolSpecies.js");
+  const RegExpPrototype = require("./RegExpPrototype.js");
+  const RegExpLikeForStringSplitting = require("./internal/RegExpLikeForStringSplitting.js");
+  const RegExpPrototypeGetDotAll = require("./RegExpPrototypeGetDotAll.js");
+  const RegExpPrototypeGetGlobal = require("./RegExpPrototypeGetGlobal.js");
+  const RegExpPrototypeGetHasIndices = require("./RegExpPrototypeGetHasIndices.js");
+  const RegExpPrototypeGetIgnoreCase = require("./RegExpPrototypeGetIgnoreCase.js");
+  const RegExpPrototypeGetMultiline = require("./RegExpPrototypeGetMultiline.js");
+  const RegExpPrototypeGetSource = require("./RegExpPrototypeGetSource.js");
+  const RegExpPrototypeGetSticky = require("./RegExpPrototypeGetSticky.js");
+  const RegExpPrototypeGetUnicode = require("./RegExpPrototypeGetUnicode.js");
+  const RegExpPrototypeGetFlags = require("./RegExpPrototypeGetFlags.js");
+  const {
+    exec: OriginalRegExpPrototypeExec,
+    // @ts-ignore
+    [SymbolMatch]: OriginalRegExpPrototypeSymbolMatch,
+    // @ts-ignore
+    [SymbolMatchAll]: OriginalRegExpPrototypeSymbolMatchAll,
+    // @ts-ignore
+    [SymbolReplace]: OriginalRegExpPrototypeSymbolReplace,
+    // @ts-ignore
+    [SymbolSearch]: OriginalRegExpPrototypeSymbolSearch,
+    // @ts-ignore
+    [SymbolSplit]: OriginalRegExpPrototypeSymbolSplit,
+  } = RegExpPrototype;
   /**
   * @param {RegExp} pattern
   * @returns {RegExp}
@@ -872,31 +931,37 @@ var js = `
   const hardenRegExp = function hardenRegExp(pattern) {
     ObjectDefineProperties(pattern, {
       [SymbolMatch]: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: OriginalRegExpPrototypeSymbolMatch,
       },
       [SymbolMatchAll]: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: OriginalRegExpPrototypeSymbolMatchAll,
       },
       [SymbolReplace]: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: OriginalRegExpPrototypeSymbolReplace,
       },
       [SymbolSearch]: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: OriginalRegExpPrototypeSymbolSearch,
       },
       [SymbolSplit]: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: OriginalRegExpPrototypeSymbolSplit,
       },
       constructor: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: {
@@ -904,52 +969,62 @@ var js = `
         },
       },
       dotAll: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: RegExpPrototypeGetDotAll(pattern),
       },
       exec: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: OriginalRegExpPrototypeExec,
       },
       global: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: RegExpPrototypeGetGlobal(pattern),
       },
       hasIndices: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: RegExpPrototypeGetHasIndices(pattern),
       },
       ignoreCase: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: RegExpPrototypeGetIgnoreCase(pattern),
       },
       multiline: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: RegExpPrototypeGetMultiline(pattern),
       },
       source: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: RegExpPrototypeGetSource(pattern),
       },
       sticky: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: RegExpPrototypeGetSticky(pattern),
       },
       unicode: {
+        // @ts-ignore
         __proto__: null,
         configurable: true,
         value: RegExpPrototypeGetUnicode(pattern),
       },
     });
     ObjectDefineProperty(pattern, 'flags', {
+      // @ts-ignore
       __proto__: null,
       configurable: true,
       value: RegExpPrototypeGetFlags(pattern),
@@ -981,39 +1056,35 @@ await fsPromises.writeFile(`dist/SafeStringPrototypeSearch.js`, js);
 const primNames = JSON.parse(
   (
     await $`node \
-    --no-warnings \
-    --expose-internals \
-    -r internal/test/binding \
-    -p ${`JSON.stringify(Object.getOwnPropertyNames(primordials))`}`
+      --no-warnings \
+      --expose-internals \
+      -r internal/test/binding \
+      -p ${`JSON.stringify(Object.getOwnPropertyNames(primordials))`}`
   ).stdout
 );
-
-var js = `"use strict";`;
-js += `const primordials = {`;
-for (const primName of primNames) {
-  js += `"${primName}": require("./${escapePrimName(primName)}.js"),`;
-}
-js += `};`;
-js += `Object.setPrototypeOf(primordials, null);`;
-js += `Object.freeze(primordials);`;
-js += `module.exports = primordials;`;
-await fsPromises.writeFile(`dist/primordials.js`, js);
+console.debug("node --version", (await $`node --version`).stdout);
+console.debug("primNames.length", primNames.length);
 
 var js = `"use strict";`;
 for (const primName of primNames) {
   js += `exports["${primName}"] = require("./${escapePrimName(primName)}.js");`;
 }
+js += `Object.setPrototypeOf(exports, null);`;
+js += `Object.freeze(exports);`;
 await fsPromises.writeFile(`dist/index.js`, js);
 
 var js = `
   "use strict";
+  // @ts-ignore
   if (typeof primordials === "undefined") {
-    const primordials_ = require("./primordials.js");
+    const primordials_ = require("./index.js");
     /** @global */
     globalThis.primordials = primordials_;
   }
 `;
 await fsPromises.writeFile(`dist/polyfill.js`, js);
+
+console.info("completed build output to dist/");
 
 var tsconfig = `{
   "compilerOptions": {
@@ -1030,10 +1101,11 @@ var tsconfig = `{
 await fsPromises.writeFile(`dist/tsconfig.json`, tsconfig);
 process.on("exit", () => fs.rmSync("dist/tsconfig.json"));
 
+console.debug("running tsc...");
 try {
   await $({ cwd: "dist" })`npx tsc --noEmit`;
 } catch (error) {
   console.error(error.stderr + error.stdout);
-  // TODO: Fix type errors?
-  // process.exit(error.exitCode);
+  process.exit(error.exitCode);
 }
+console.debug("tsc completed successfully");
