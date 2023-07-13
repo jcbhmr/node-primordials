@@ -185,7 +185,6 @@ await writeFile("dist/index-node.js", js);
 js = "";
 js += "'use strict';\n";
 for (const name of await getAllPrimordialNames()) {
-  const escapedName = escapeNodePrimitiveName(name);
   // prettier-ignore
   js += `exports${propertyAccessorFor(name)} = `;
 }

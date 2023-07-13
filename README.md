@@ -46,7 +46,8 @@ your browser, you can use an ESM npm CDN like [esm.sh] or [jsDelivr].
 
 ```js
 import {} from "https://esm.sh/@nodefill/primordials";
-import {} from "https://esm.run/@nodefill/primordials";
+// ❌ import {} from "https://esm.run/@nodefill/primordials";
+// esm.run doesn't work: https://github.com/jsdelivr/jsdelivr/issues/18512
 ```
 
 <details><summary>ℹ esm.sh and jsDeliver currently don't support
