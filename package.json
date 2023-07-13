@@ -1,6 +1,6 @@
 {
   "name": "@nodefill/primordials",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "description": "🧊 The native primordials object from Node.js for anywhere",
   "keywords": [
     "nodejs",
@@ -22,6 +22,7 @@
   "type": "commonjs",
   "imports": {
     "#index.js": {
+      "browser": "./dist/index-browser.js",
       "deno": "./dist/index-deno+bun+default.js",
       "bun": "./dist/index-deno+bun+default.js",
       "node": "./dist/index-node.js",
@@ -30,6 +31,7 @@
   },
   "exports": {
     ".": {
+      "browser": "./dist/index-browser.js",
       "deno": "./dist/index-deno+bun+default.js",
       "bun": "./dist/index-deno+bun+default.js",
       "node": "./dist/index-node.js",

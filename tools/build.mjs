@@ -4,7 +4,11 @@ import { $ } from "execa";
 import createNamespaceFiles from "./createNamespaceFiles.mjs";
 import createClassFiles from "./createClassFiles.mjs";
 import getAllPrimordialNames from "./getAllPrimordialNames.mjs";
-import { escapeNodePrimitiveName, propertyAccessorFor } from "./util.mjs";
+import {
+  escapeNodePrimitiveName,
+  expressionFor,
+  propertyAccessorFor,
+} from "./util.mjs";
 
 await rm("dist", { recursive: true, force: true });
 await mkdir("dist", { recursive: true });
@@ -177,6 +181,31 @@ js += "Object.freeze(exports);\n";
 js += "}\n";
 js += "}\n";
 await writeFile("dist/index-node.js", js);
+
+js = "";
+js += "'use strict';\n";
+for (const name of await getAllPrimordialNames()) {
+  const escapedName = escapeNodePrimitiveName(name);
+  // prettier-ignore
+  js += `exports${propertyAccessorFor(name)} = `;
+}
+js += "void 0;\n";
+js += `
+  if (typeof primordials !== 'undefined') {
+    module.exports = primordials;
+  } else {
+    module.exports = {
+`;
+for (const name of await getAllPrimordialNames()) {
+  const escapedName = escapeNodePrimitiveName(name);
+  // prettier-ignore
+  js += `[${expressionFor(name)}]: require("./${escapedName}.js"),\n`;
+}
+js += "};\n";
+js += "Object.setPrototypeOf(module.exports, null);\n";
+js += "Object.freeze(module.exports);\n";
+js += "}\n";
+await writeFile("dist/index-browser.js", js);
 
 if (tscError) {
   throw tscError;
