@@ -36,18 +36,12 @@ import {} from "npm:@nodefill/primordials";
 import {} from "https://esm.sh/@nodefill/primordials";
 ```
 
-🛑 On Deno, `import "npm:@nodefill/primordials"` doesn't work due to
-[denoland/deno#19665]. You can still import it through esm.sh or esm.run, or
-just import a sub-file directly. The error is due to Deno's CommonJS compat
-layer not escaping named export names.
-
 If you're using not using a build tool and you just want to use the package in
 your browser, you can use an ESM npm CDN like [esm.sh] or [jsDelivr].
 
 ```js
 import {} from "https://esm.sh/@nodefill/primordials";
-// ❌ import {} from "https://esm.run/@nodefill/primordials";
-// esm.run doesn't work: https://github.com/jsdelivr/jsdelivr/issues/18512
+import {} from "https://esm.run/@nodefill/primordials";
 ```
 
 <details><summary>ℹ esm.sh and jsDeliver currently don't support
