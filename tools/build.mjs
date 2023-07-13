@@ -150,7 +150,7 @@ for (const name of await getAllPrimordialNames()) {
 js += "Object.setPrototypeOf(exports, null);\n";
 js += "Object.freeze(exports);\n";
 js += "}\n";
-await writeFile("dist/index-default.js", js);
+await writeFile("dist/index-index-deno+bun+default.js", js);
 
 js = "";
 js += "'use strict';\n";
