@@ -1,6 +1,6 @@
 {
   "name": "@nodefill/primordials",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "🧊 The native primordials object from Node.js for anywhere",
   "keywords": [
     "nodejs",
