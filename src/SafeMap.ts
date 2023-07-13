@@ -4,8 +4,9 @@ const SafeMap = makeSafe(
   Map,
   class SafeMap extends Map {
     constructor(i) {
+      // @ts-ignore
       super(i);
-    } // eslint-disable-line no-useless-constructor
+    }
   }
 );
 export = SafeMap;

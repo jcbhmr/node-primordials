@@ -14,7 +14,7 @@ import ObjectFreeze from "../ObjectFreeze.js";
  */
 function createSafeIterator<T, TReturn, TNext>(factory, next) {
   class SafeIterator {
-    private _iterator: Iterator<T, TReturn, TNext>;
+    _iterator: Iterator<T, TReturn, TNext>;
     constructor(iterable) {
       this._iterator = factory(iterable);
     }

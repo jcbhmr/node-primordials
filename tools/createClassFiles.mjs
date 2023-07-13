@@ -67,17 +67,33 @@ export default function createClassFiles(className) {
     // prettier-ignore
     const desc = Object.getOwnPropertyDescriptor(globalThis[className].prototype, key);
     if ("value" in desc) {
-      const name = nodePrimitiveNameFor([className, "prototype", key]);
-      const escapedName = escapeNodePrimitiveName(name);
-      // prettier-ignore
-      const js = `
-        "use strict";
-        const ClassPrototype = require("./${className}Prototype.js");
-        /** @type {${className}[${expressionFor(key)}]} */
-        const ${escapedName} = ClassPrototype${propertyAccessorFor(key)};
-        module.exports = ${escapedName};
-      `;
-      files.push(new File([js], escapedName + ".js"));
+      if (typeof desc.value === "function") {
+        const name = nodePrimitiveNameFor([className, "prototype", key]);
+        const escapedName = escapeNodePrimitiveName(name);
+        // prettier-ignore
+        const js = `
+          "use strict";
+          const uncurryThis = require("./uncurryThis.js");
+          const ClassPrototype = require("./${className}Prototype.js");
+          const method = ClassPrototype${propertyAccessorFor(key)};
+          /** @type {(t: ${className}, ...a: Parameters<${className}[${expressionFor(key)}]>) => ReturnType<${className}[${expressionFor(key)}]>} */
+          const ${escapedName} = uncurryThis(method);
+          module.exports = ${escapedName};
+        `;
+        files.push(new File([js], escapedName + ".js"));
+      } else {
+        const name = nodePrimitiveNameFor([className, "prototype", key]);
+        const escapedName = escapeNodePrimitiveName(name);
+        // prettier-ignore
+        const js = `
+          "use strict";
+          const ClassPrototype = require("./${className}Prototype.js");
+          /** @type {${className}[${expressionFor(key)}]} */
+          const ${escapedName} = ClassPrototype${propertyAccessorFor(key)};
+          module.exports = ${escapedName};
+        `;
+        files.push(new File([js], escapedName + ".js"));
+      }
     } else {
       const name = nodePrimitiveNameFor([className, "prototype", "get", key]);
       const escapedName = escapeNodePrimitiveName(name);

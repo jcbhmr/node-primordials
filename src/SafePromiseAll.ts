@@ -11,6 +11,7 @@ const SafePromiseAll = (promises, mapFn) =>
   // Wrapping on a new Promise is necessary to not expose the SafePromise
   // prototype to user-land.
   new Promise((a, b) =>
+    // @ts-ignore
     SafePromise.all(arrayToSafePromiseIterable(promises, mapFn)).then(a, b)
   );
 export = SafePromiseAll;
