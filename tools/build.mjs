@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { mkdir, readdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, rm, writeFile } from "node:fs/promises";
 import { $ } from "execa";
 import createNamespaceFiles from "./createNamespaceFiles.mjs";
 import createClassFiles from "./createClassFiles.mjs";

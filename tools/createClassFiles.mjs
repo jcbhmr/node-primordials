@@ -41,7 +41,7 @@ export default function createClassFiles(className) {
       const js = `
         "use strict";
         const Class = require("./${className}.js");
-        const { get: ${escapedName} } = Object.getOwnPropertyDescriptor(Class, ${expressionFor(key)});
+        const { get: ${escapedName} } = Object.getOwnPropertyDescriptor(Class, ${expressionFor(key)}) ?? {};
         /** @type {() => typeof ${className}[${expressionFor(key)}]} */
         module.exports = ${escapedName};
       `;
@@ -54,7 +54,7 @@ export default function createClassFiles(className) {
         const js = `
           "use strict";
           const Class = require("./${className}.js");
-          const { set: ${escapedName} } = Object.getOwnPropertyDescriptor(Class, ${expressionFor(key)});
+          const { set: ${escapedName} } = Object.getOwnPropertyDescriptor(Class, ${expressionFor(key)}) ?? {};
           /** @type {(x: typeof ${className}[${expressionFor(key)}]) => void} */
           module.exports = ${escapedName};
         `;
@@ -102,7 +102,7 @@ export default function createClassFiles(className) {
         "use strict";
         const uncurryThis = require("./uncurryThis.js");
         const ClassPrototype = require("./${className}Prototype.js");
-        const { get } = Object.getOwnPropertyDescriptor(ClassPrototype, ${expressionFor(key)});
+        const { get } = Object.getOwnPropertyDescriptor(ClassPrototype, ${expressionFor(key)}) ?? {};
         /** @type {() => ${className}[${expressionFor(key)}]} */
         const ${escapedName} = uncurryThis(get);
         module.exports = ${escapedName};
@@ -117,7 +117,7 @@ export default function createClassFiles(className) {
           "use strict";
           const uncurryThis = require("./uncurryThis.js");
           const ClassPrototype = require("./${className}Prototype.js");
-          const { set } = Object.getOwnPropertyDescriptor(ClassPrototype, ${expressionFor(key)});
+          const { set } = Object.getOwnPropertyDescriptor(ClassPrototype, ${expressionFor(key)}) ?? {};
           /** @type {(x: ${className}[${expressionFor(key)}]) => void} */
           const ${escapedName} = uncurryThis(set);
           module.exports = ${escapedName};

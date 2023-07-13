@@ -22,14 +22,18 @@
   "type": "commonjs",
   "imports": {
     "#index.js": {
+      "deno": "./dist/index-deno+bun+default.js",
+      "bun": "./dist/index-deno+bun+default.js",
       "node": "./dist/index-node.js",
-      "default": "./dist/index-default.js"
+      "default": "./dist/index-deno+bun+default.js"
     }
   },
   "exports": {
     ".": {
+      "deno": "./dist/index-deno+bun+default.js",
+      "bun": "./dist/index-deno+bun+default.js",
       "node": "./dist/index-node.js",
-      "default": "./dist/index-default.js"
+      "default": "./dist/index-deno+bun+default.js"
     },
     "./lib/*": null,
     "./*.js": "./dist/*.js"
