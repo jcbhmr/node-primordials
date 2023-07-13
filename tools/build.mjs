@@ -136,7 +136,12 @@ try {
 }
 
 let js = "";
-js += '"use strict";\n';
+js += "'use strict';\n";
+js += `
+  if (typeof primordials !== 'undefined') {
+    module.exports = primordials;
+  } else {
+`;
 for (const name of await getAllPrimordialNames()) {
   const escapedName = escapeNodePrimitiveName(name);
   // prettier-ignore
@@ -144,7 +149,34 @@ for (const name of await getAllPrimordialNames()) {
 }
 js += "Object.setPrototypeOf(exports, null);\n";
 js += "Object.freeze(exports);\n";
-await writeFile("dist/index.js", js);
+js += "}\n";
+await writeFile("dist/index-default.js", js);
+
+js = "";
+js += "'use strict';\n";
+js += `
+  if (typeof primordials !== 'undefined') {
+    module.exports = primordials;
+  } else {
+    let internalLoaded = false;
+    try {
+      const { primordials } = require("internal/test/binding");
+      internalLoaded = true;
+      module.exports = primordials;
+    } catch {}
+
+    if (!internalLoaded) {
+`;
+for (const name of await getAllPrimordialNames()) {
+  const escapedName = escapeNodePrimitiveName(name);
+  // prettier-ignore
+  js += `exports${propertyAccessorFor(name)} = require("./${escapedName}.js");\n`;
+}
+js += "Object.setPrototypeOf(exports, null);\n";
+js += "Object.freeze(exports);\n";
+js += "}\n";
+js += "}\n";
+await writeFile("dist/index-node.js", js);
 
 if (tscError) {
   throw tscError;

@@ -20,8 +20,17 @@
     "Isaac Z. Schlueter <i@izs.me> (https://blog.izs.me)"
   ],
   "type": "commonjs",
+  "imports": {
+    "#index.js": {
+      "node": "./dist/index-node.js",
+      "default": "./dist/index-default.js"
+    }
+  },
   "exports": {
-    ".": "./dist/index.js",
+    ".": {
+      "node": "./dist/index-node.js",
+      "default": "./dist/index-default.js"
+    },
     "./lib/*": null,
     "./*.js": "./dist/*.js"
   },

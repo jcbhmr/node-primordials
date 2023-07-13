@@ -8,12 +8,12 @@ console.debug("primordialNames.length", primordialNames.length);
 
 for (const name of primordialNames) {
   test(`exports ${name}`, async () => {
-    const index = await import("../dist/index.js");
+    const index = await import("../dist/index-node.js");
     assert(name in index, `missing ${name}`);
   });
 }
 test(`default export is primordials`, async () => {
-  const { default: primordials } = await import("../dist/index.js");
+  const { default: primordials } = await import("../dist/index-node.js");
   assert.equal(Object.getPrototypeOf(primordials), null);
   assert(Object.isFrozen(primordials));
 });
