@@ -1,4 +1,5 @@
 import uncurryThis from "./uncurryThis.js";
 
-const PromiseAny = uncurryThis(Promise.any, Promise);
+// @ts-ignore
+const PromiseAny = uncurryThis(Promise.any, Promise) as typeof Promise.any;
 export = PromiseAny;

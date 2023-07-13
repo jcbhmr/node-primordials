@@ -1,2 +1,2 @@
 const eval_ = globalThis.eval;
-export = eval_
+export = eval_;
