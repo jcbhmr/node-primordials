@@ -106,6 +106,9 @@ const expectedManualFiles = [
   "eval",
   "globalThis",
 
+  // Normal 'globalThis.TypedArray' doesn't work.
+  "TypedArray",
+
   // 'TypedArray' static methods need a 'this'.
   "TypedArrayFrom",
   "TypedArrayGetSymbolSpecies",

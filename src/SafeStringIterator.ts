@@ -1,7 +1,10 @@
-"use strict";
-const createSafeIterator = require("./lib/createSafeIterator.js");
-const StringPrototypeSymbolIterator = require("./StringPrototypeSymbolIterator.js");
-const StringIteratorPrototypeNext = require("./StringIteratorPrototypeNext.js");
+// @ts-ignore
+import StringPrototypeSymbolIterator from "./StringPrototypeSymbolIterator.js";
+// @ts-ignore
+import StringIteratorPrototypeNext from "./StringIteratorPrototypeNext.js";
+
+import createSafeIterator from "./lib/createSafeIterator.js";
+
 const SafeStringIterator = createSafeIterator(
   StringPrototypeSymbolIterator,
 

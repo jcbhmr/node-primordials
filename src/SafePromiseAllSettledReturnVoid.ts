@@ -1,5 +1,5 @@
-"use strict";
-const SafePromiseAllSettled = require("./SafePromiseAllSettled.js");
+import SafePromiseAllSettled from "./SafePromiseAllSettled.js";
+
 /**
  * Should only be used when we only care about waiting for all the promises to
  * settle, not what value they resolve or reject to.

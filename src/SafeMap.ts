@@ -1,5 +1,5 @@
-"use strict";
-const makeSafe = require("./makeSafe.js");
+import makeSafe from "./makeSafe.js";
+
 const SafeMap = makeSafe(
   Map,
   class SafeMap extends Map {

@@ -1,22 +1,20 @@
-"use strict";
-const ObjectSetPrototypeOf = require("../ObjectSetPrototypeOf.js");
-const SymbolIterator = require("../SymbolIterator.js");
-const ObjectFreeze = require("../ObjectFreeze.js");
+// @ts-ignore
+import ObjectSetPrototypeOf from "../ObjectSetPrototypeOf.js";
+// @ts-ignore
+import SymbolIterator from "../SymbolIterator.js";
+// @ts-ignore
+import ObjectFreeze from "../ObjectFreeze.js";
+
 /**
  * Creates a class that can be safely iterated over.
  *
  * Because these functions are used by makeSafe, which is exposed on the
  * primordials object, it's important to use const references to the
  * primordials that they use.
- * @template {Iterable} T
- * @template {*} TReturn
- * @template {*} TNext
- * @param {(self: T) => IterableIterator<T>} factory
- * @param {(...args: [] | [TNext]) => IteratorResult<T, TReturn>} next
- * @returns {Iterator<T, TReturn, TNext>}
  */
-const createSafeIterator = (factory, next) => {
+function createSafeIterator<T, TReturn, TNext>(factory, next) {
   class SafeIterator {
+    private _iterator: Iterator<T, TReturn, TNext>;
     constructor(iterable) {
       this._iterator = factory(iterable);
     }
@@ -32,5 +30,5 @@ const createSafeIterator = (factory, next) => {
   ObjectFreeze(SafeIterator);
 
   return SafeIterator;
-};
+}
 export = createSafeIterator;

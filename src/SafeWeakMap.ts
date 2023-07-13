@@ -1,5 +1,5 @@
-"use strict";
-const makeSafe = require("./makeSafe.js");
+import makeSafe from "./makeSafe.js";
+
 const SafeWeakMap = makeSafe(
   WeakMap,
 

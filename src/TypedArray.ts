@@ -1,6 +1,3 @@
-// This will get slotted next to the generated 'TypedArray.js' file. That means
-// we can overwrite the '@type' annotation with a better one!
-
 type TypedArray = (
   | Uint8Array
   | Int8Array
@@ -24,4 +21,5 @@ type TypedArray = (
     | Float32Array["toLocaleString"]
     | Float64Array["toLocaleString"];
 };
+const TypedArray = Object.getPrototypeOf(Uint8Array);
 export = TypedArray;

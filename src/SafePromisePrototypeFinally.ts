@@ -1,6 +1,8 @@
-"use strict";
-const SafePromise = require("./lib/SafePromise.js");
-const PromisePrototypeThen = require("./PromisePrototypeThen.js");
+// @ts-ignore
+import PromisePrototypeThen from "./PromisePrototypeThen.js";
+
+import SafePromise from "./lib/SafePromise.js";
+
 /**
  * Attaches a callback that is invoked when the Promise is settled (fulfilled or
  * rejected). The resolved value cannot be modified from the callback.

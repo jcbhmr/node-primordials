@@ -1,8 +1,11 @@
-"use strict";
-const SafeArrayIterator = require("../SafeArrayIterator.js");
-const ArrayPrototypeMap = require("../ArrayPrototypeMap.js");
-const SafePromise = require("./SafePromise.js");
-const PromisePrototypeThen = require("../PromisePrototypeThen.js");
+// @ts-ignore
+import SafeArrayIterator from "../SafeArrayIterator.js";
+// @ts-ignore
+import ArrayPrototypeMap from "../ArrayPrototypeMap.js";
+// @ts-ignore
+import PromisePrototypeThen from "../PromisePrototypeThen.js";
+
+import SafePromise from "./SafePromise.js";
 
 const arrayToSafePromiseIterable = (promises, mapFn) =>
   new SafeArrayIterator(

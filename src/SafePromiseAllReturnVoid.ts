@@ -1,6 +1,6 @@
-"use strict";
-const PromisePrototypeThen = require("./PromisePrototypeThen.js");
-const PromiseResolve = require("./PromiseResolve.js");
+import PromisePrototypeThen from "./PromisePrototypeThen.js";
+import PromiseResolve from "./PromiseResolve.js";
+
 /**
  * Should only be used when we only care about waiting for all the promises to
  * resolve, not what value they resolve to.

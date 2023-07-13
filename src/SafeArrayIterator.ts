@@ -1,10 +1,12 @@
-"use strict";
-const createSafeIterator = require("./lib/createSafeIterator.js");
-const ArrayPrototypeSymbolIterator = require("./ArrayPrototypeSymbolIterator.js");
-const ArrayIteratorPrototypeNext = require("./ArrayIteratorPrototypeNext.js");
+// @ts-ignore
+import ArrayPrototypeSymbolIterator from "./ArrayPrototypeSymbolIterator.js";
+// @ts-ignore
+import ArrayIteratorPrototypeNext from "./ArrayIteratorPrototypeNext.js";
+
+import createSafeIterator from "./lib/createSafeIterator.js";
+
 const SafeArrayIterator = createSafeIterator(
   ArrayPrototypeSymbolIterator,
-
   ArrayIteratorPrototypeNext
 );
 export = SafeArrayIterator;

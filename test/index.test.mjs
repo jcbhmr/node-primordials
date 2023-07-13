@@ -1,4 +1,5 @@
-import { test, assert } from "vitest";
+import test from "node:test";
+import assert from "node:assert";
 import getAllPrimordialNames from "../tools/getAllPrimordialNames.mjs";
 import { escapeNodePrimitiveName } from "../tools/util.mjs";
 
@@ -18,9 +19,9 @@ test(`default export is primordials`, async () => {
 });
 
 for (const name of primordialNames) {
-  const escapedName = escapeNodePrimitiveName(name)
+  const escapedName = escapeNodePrimitiveName(name);
   test(`file ${escapedName}.js importable`, async () => {
-    await import(/* @vite-ignore */ `../dist/${escapedName}.js`);
+    await import(`../dist/${escapedName}.js`);
   });
 }
 

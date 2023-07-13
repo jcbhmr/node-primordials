@@ -1,5 +1,6 @@
-"use strict";
-const RegExpPrototypeExec = require("./RegExpPrototypeExec.js");
+// @ts-ignore
+import RegExpPrototypeExec from "./RegExpPrototypeExec.js";
+
 /**
  * @param {string} str
  * @param {RegExp} regexp

@@ -1,7 +1,9 @@
-"use strict";
-const Promise = require("./Promise.js");
-const SafePromise = require("./lib/SafePromise.js");
-const arrayToSafePromiseIterable = require("./lib/arrayToSafePromiseIterable.js");
+// @ts-ignore
+import Promise from "./Promise.js";
+
+import SafePromise from "./lib/SafePromise.js";
+import arrayToSafePromiseIterable from "./lib/arrayToSafePromiseIterable.js";
+
 /**
  * @template T,U
  * @param {Array<T|PromiseLike<T>>} promises

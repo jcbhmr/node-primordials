@@ -1,9 +1,14 @@
-"use strict";
-const Promise = require("./Promise.js");
-const PromiseResolve = require("./PromiseResolve.js");
-const ObjectSetPrototypeOf = require("./ObjectSetPrototypeOf.js");
-const ArrayConstructor = require("./Array.js");
-const PromisePrototypeThen = require("./PromisePrototypeThen.js");
+// @ts-ignore
+import Promise from "./Promise.js";
+// @ts-ignore
+import PromiseResolve from "./PromiseResolve.js";
+// @ts-ignore
+import ObjectSetPrototypeOf from "./ObjectSetPrototypeOf.js";
+// @ts-ignore
+import ArrayConstructor from "./Array.js";
+// @ts-ignore
+import PromisePrototypeThen from "./PromisePrototypeThen.js";
+
 /**
  * Should only be used for internal functions, this would produce similar
  * results as Promise.all but without prototype pollution, and the return

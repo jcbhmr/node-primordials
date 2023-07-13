@@ -1,5 +1,5 @@
-"use strict";
-const makeSafe = require("./makeSafe.js");
+import makeSafe from "./makeSafe.js";
+
 const SafeWeakSet = makeSafe(
   WeakSet,
   class SafeWeakSet extends WeakSet {

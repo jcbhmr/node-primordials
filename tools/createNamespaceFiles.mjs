@@ -21,7 +21,7 @@ export default function createNamespaceFiles(namespaceName) {
       // prettier-ignore
       const js = `
         "use strict";
-        const Namespace = globalThis.${namespaceName} ?? {};
+        const Namespace = globalThis.${namespaceName};
         const ${escapedName} = Namespace${propertyAccessorFor(key)};
         module.exports = ${escapedName};
       `;
@@ -32,8 +32,8 @@ export default function createNamespaceFiles(namespaceName) {
       // prettier-ignore
       const js = `
         "use strict";
-        const Namespace = globalThis.${namespaceName} ?? {};
-        const { get: ${escapedName} } = Object.getOwnPropertyDescriptor(Namespace, ${expressionFor(key)}) ?? {};
+        const Namespace = globalThis.${namespaceName};
+        const { get: ${escapedName} } = Object.getOwnPropertyDescriptor(Namespace, ${expressionFor(key)});
         /** @type {() => typeof ${namespaceName}[${expressionFor(key)}]} */
         module.exports = ${escapedName};
       `;
@@ -45,8 +45,8 @@ export default function createNamespaceFiles(namespaceName) {
         // prettier-ignore
         const js = `
           "use strict";
-          const Namespace = globalThis.${namespaceName} ?? {};
-          const { set: ${escapedName} } = Object.getOwnPropertyDescriptor(Namespace, ${expressionFor(key)}) ?? {};
+          const Namespace = globalThis.${namespaceName};
+          const { set: ${escapedName} } = Object.getOwnPropertyDescriptor(Namespace, ${expressionFor(key)});
           /** @type {(x: typeof ${namespaceName}[${expressionFor(key)}]) => void} */
           module.exports = ${escapedName};
         `;
