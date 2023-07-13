@@ -142,20 +142,7 @@ entity names) to avoid issues with restrictive file systems like Windows. 😉
 
 ## Development
 
-![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
-
-All the code is generated from `build.mjs`. There's no `src/` folder. This was
-done because there are literally _over seven-hundred files that need to be
-generated_ and that would be very arduous to maintain and edit them in `src/`.
-Instead, we use code from the original `primordials.js` file in Node.js core to
-generate a bunch of `.js` files dynamically at build time. The current state of
-`build.mjs` is a bit of a mess, but it works. 😅 If you have any improvements,
-open an Issue or PR! ❤️
-
-For TypeScript stuff, we use JSDoc to (partially) type the generated JavaScript
-code. It could be better. A lot better. Most of the functions are currently
-**untyped**. If you'd like to help improve type coverage, please open an Issue
-or PR! ❤️
+TODO: Describe dev process
 
 <!-- prettier-ignore-start -->
 [esm.sh]: https://esm.sh/
