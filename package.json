@@ -22,7 +22,6 @@
   "type": "commonjs",
   "imports": {
     "#index.js": {
-      "browser": "./dist/index-browser.js",
       "deno": "./dist/index-deno+bun+default.js",
       "bun": "./dist/index-deno+bun+default.js",
       "node": "./dist/index-node.js",
@@ -31,7 +30,6 @@
   },
   "exports": {
     ".": {
-      "browser": "./dist/index-browser.js",
       "deno": "./dist/index-deno+bun+default.js",
       "bun": "./dist/index-deno+bun+default.js",
       "node": "./dist/index-node.js",
